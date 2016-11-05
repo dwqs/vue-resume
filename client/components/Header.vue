@@ -1,6 +1,6 @@
 <template>
     <div class="resume-header">
-        {{msg}}
+        {{msg}} - {{data.age}}
     </div>
 </template>
 
@@ -11,12 +11,20 @@
 </style>
 
 <script>
+    import {mapState} from 'vuex';
 
     export default{
-        data (){
-            return{
-                msg:'resume-header'
-            };
+
+        data(){
+            return {
+                msg:'header'
+            }
+        },
+
+        computed: {
+            ...mapState({
+                data: state => state.resume.profile
+            })
         }
     };
 </script>

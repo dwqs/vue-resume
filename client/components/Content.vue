@@ -1,6 +1,6 @@
 <template>
     <div class="resume-content">
-        {{msg}}
+        {{data.name}} - {{msg}}
     </div>
 </template>
 
@@ -11,12 +11,19 @@
 </style>
 
 <script>
+    import {mapState} from 'vuex';
 
     export default{
         data (){
             return{
                 msg:'resume-content'
             };
+        },
+
+        computed: {
+            ...mapState({
+                data: state => state.resume.profile
+            })
         }
     };
 </script>

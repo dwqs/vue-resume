@@ -13,7 +13,6 @@ export const getResumeData = ({commit,dispatch}) => {
     fetch('/resume').then((res)=>{
         return res.json();
     }).then((data)=>{
-        this.data = data.resume;
         commit({
             type:types.GET_RESUME_DATA,
             resume:data.resume

@@ -48,9 +48,9 @@ module.exports = {
     externals: {
         "jquery": "jQuery"
     },
-    vue: {
-        loaders: {
-            js: 'babel!eslint'
-        }
-    }
+    // vue: {
+    //     loaders: {
+    //         js: 'babel!eslint'
+    //     }
+    // }
 };

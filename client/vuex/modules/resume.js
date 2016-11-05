@@ -6,7 +6,7 @@
 import * as types from '../mutation-types';
 
 const state = {
-    resume: {},
+    profile: {},
     fetching: false
 };
 
@@ -15,7 +15,7 @@ const mutations = {
         state.fetching = true;
     },
     [types.GET_RESUME_DATA] (state,payload){
-        state.resume = payload;
+        state.profile = payload.resume;
         state.fetching = false;
     }
 };

@@ -1,5 +1,6 @@
 <template>
     <div class="vue-resume">
+        {{fetching}} - {{msg}}
         <resume-header></resume-header>
         <resume-content></resume-content>
         <resume-footer></resume-footer>
@@ -16,6 +17,7 @@
 </style>
 
 <script>
+    import {mapGetters,mapState} from 'vuex';
 
     import ResumeHeader from '@components/Header.vue';
     import ResumeContent from '@components/Content.vue';
@@ -23,6 +25,21 @@
     import ResumeFloatRight from '@components/FloatRight.vue';
 
     export default {
+        data(){
+            return{
+                msg:"APP"
+            }
+        },
+        computed:{
+            ...mapGetters({
+               fetching:'getFetching'
+            })
+        },
+        created (){
+            //实例的属性已经生成,可以通过 this.fetching 访问
+            this.$store.dispatch('getResumeData');
+        },
+
         components:{
             ResumeHeader,
             ResumeContent,
