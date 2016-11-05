@@ -1,1 +1,1 @@
-Nothing,just playing
+Online Resume Template powered by vue, a small project for learning vue in practice.
