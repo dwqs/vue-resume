@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev":"",
-    "pro":""
+    "prod":""
   },
   "dependencies": {
     "vue":"^2.0.0",

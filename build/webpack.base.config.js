@@ -35,6 +35,11 @@ export default {
             }
         ]
     },
+    resolve:{
+        extensions:["",".js",".vue"],
+        fallback: [path.join(__dirname, '../node_modules')],
+        alias:{}
+    },
     vue: {
         loaders: {
             js: 'babel!eslint'
