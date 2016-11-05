@@ -5,11 +5,11 @@
 'use sreict';
 
 import webpack from 'webpack';
-import proConfig from './webpack.base.config';
+import prodConfig from './webpack.base.config';
 
-proConfig.devtool = 'source-map';
+prodConfig.devtool = 'source-map';
 
-proConfig.plugins = (proConfig.plugins || []).concat([
+prodConfig.plugins = (prodConfig.plugins || []).concat([
     new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: '"production"'
@@ -23,4 +23,4 @@ proConfig.plugins = (proConfig.plugins || []).concat([
     new webpack.optimize.OccurenceOrderPlugin()
 ]);
 
-export default proConfig;
+export default prodConfig;
