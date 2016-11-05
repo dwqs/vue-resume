@@ -4,8 +4,8 @@
 
 'use sreict';
 
-import webpack from 'webpack';
-import prodConfig from './webpack.base.config';
+var webpack = require('webpack');
+var prodConfig = require('./webpack.base.config');
 
 prodConfig.devtool = 'source-map';
 
@@ -23,4 +23,4 @@ prodConfig.plugins = (prodConfig.plugins || []).concat([
     new webpack.optimize.OccurenceOrderPlugin()
 ]);
 
-export default prodConfig;
+module.exports = prodConfig;

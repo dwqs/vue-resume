@@ -3,11 +3,11 @@
  */
 'use sreict';
 
-import {path} from 'path';
+var path = require('path');
 
-export default {
+module.exports = {
     entry: {
-        app:['../src/index.js']
+        app:[path.resolve(__dirname, '../client/index.js')]
     },
     output: {
         filename: '[name].js',
@@ -36,9 +36,10 @@ export default {
         ]
     },
     resolve:{
-        extensions:["",".js",".vue"],
-        fallback: [path.join(__dirname, '../node_modules')],
-        alias:{}
+        extensions:["",".js",".vue"]
+    },
+    externals: {
+        "jquery": "jQuery"
     },
     vue: {
         loaders: {

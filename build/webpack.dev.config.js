@@ -4,10 +4,13 @@
 
 'use sreict';
 
-import webpack from 'webpack';
-import devConfig from './webpack.base.config';
+var webpack = require('webpack');
+var devConfig = require('./webpack.base.config');
 
-devConfig.entry.app.unshift("webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server");
+devConfig.entry.app.unshift(
+    "webpack-dev-server/client?http://localhost:3000/",
+    "webpack/hot/dev-server"
+);
 
 devConfig.plugins = (devConfig.plugins || []).concat([
     new webpack.HotModuleReplacementPlugin(),
@@ -15,13 +18,18 @@ devConfig.plugins = (devConfig.plugins || []).concat([
         'process.env': {
             NODE_ENV: '"development"'
         }
-    })
+    }),
+    new webpack.NoErrorsPlugin()
 ]);
 
 devConfig.devtool = 'eval-source-map';
 devConfig.devServer = {
     noInfo: true,
-    hot: true
+    hot: true,
+    port:3000,
+    debug: true,
+    quite: false,
+    contentBase:'./public/assets'
 };
 
-export default devConfig;
+module.exports = devConfig;
