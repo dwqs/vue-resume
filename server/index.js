@@ -34,9 +34,9 @@ app.use(logger());
 
 router.get('/resume',function *() {
     this.response.set("Content-Type", "application/json;charset=utf-8");
-    console.log('222');
+    let resume = require('./resume.json');
     this.response.body = {
-        profile:'袁康'
+        resume: resume
     };
 });
 
