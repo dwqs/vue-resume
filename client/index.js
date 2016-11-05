@@ -4,13 +4,17 @@
 
 'use sreict';
 
+import 'babel-polyfill';
+
 import Vue from 'vue';
 import $ from 'jquery';
 
+import store from './vuex/index';
 import App from './App.vue';
 
 $(()=>{
     new Vue({
+        store,
         el: '#resume-vue',
         render: h => h(App)
     });

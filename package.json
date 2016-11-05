@@ -19,6 +19,7 @@
   "dependencies": {
     "vue":"^2.0.0",
     "vuex":"^2.0.0",
+    "babel-polyfill": "^6.9.1",
     "koa": "^0.20.0",
     "koa-bodyparser": "^2.0.1",
     "koa-compress": "^1.0.8",

@@ -40,7 +40,10 @@ module.exports = {
         ]
     },
     resolve:{
-        extensions:["",".js",".vue"]
+        extensions:["",".js",".vue"],
+        alias:{
+            '@components': path.resolve(__dirname, '../client/components')
+        }
     },
     externals: {
         "jquery": "jQuery"

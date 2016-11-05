@@ -1,42 +1,33 @@
 <template>
-    <div class="vue" :class="{test:dev}">
-        12my resume powered by vue
-        <div v-show='data'>{{data.name}}</div>
+    <div class="vue-resume">
+        <resume-header></resume-header>
+        <resume-content></resume-content>
+        <resume-footer></resume-footer>
+        <resume-float-right></resume-float-right>
     </div>
 </template>
 
 <style scoped>
-    .test{
-        color:red
+    .vue-resume{
+        margin: 0 auto;
+        width: 960px;
+        border: 1px solid blue
     }
 </style>
 
 <script>
+
+    import ResumeHeader from '@components/Header.vue';
+    import ResumeContent from '@components/Content.vue';
+    import ResumeFooter from '@components/Footer.vue';
+    import ResumeFloatRight from '@components/FloatRight.vue';
+
     export default {
-        data () {
-            return {
-                dev: true,
-                data:''
-            };
-        },
-
-        created () {
-            fetch('/resume').then((res)=>{
-                return res.json();
-            }).then((data)=>{
-                this.data = data.resume;
-            }).catch((err) => console.log('error',err));
-        },
-
-        beforeMount (){
-        },
-
-        mounted (){
-
-        },
-
-        beforeUpdate (){
-
+        components:{
+            ResumeHeader,
+            ResumeContent,
+            ResumeFooter,
+            ResumeFloatRight
         }
     };
 </script>

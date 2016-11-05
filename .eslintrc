@@ -20,6 +20,7 @@
       "templateStrings": true
     },
     "parser": "babel-eslint",
+    "extends": "eslint:recommended",
     "rules": {
       "indent": [2, 4],
       "quotes": [2, "single"],
