@@ -1,0 +1,42 @@
+{
+  "name": "my-resume",
+  "version": "0.0.1",
+  "author":"pomy",
+  "description": "online resume",
+  "license": "MIT",
+  "keywords": ["resume","vue"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dwqs/resume.git"
+  },
+  "scripts": {
+    "dev":"",
+    "pro":""
+  },
+  "dependencies": {
+    "vue":"^2.0.0",
+    "vuex":"^2.0.0",
+    "koa": "^0.20.0",
+    "koa-bodyparser": "^2.0.1",
+    "koa-compress": "^1.0.8",
+    "koa-logger": "^1.2.2",
+    "koa-router": "^5.0.0",
+    "koa-static": "^1.4.5",
+    "swig": "^1.3.2",
+    "koa-json": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
+    "vue-loader": "^9.7.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.0"
+  },
+  "maintainers": [{
+      "name": "pomy",
+      "email": "pomysky@gmail.com"
+    }]
+}
