@@ -1,10 +1,11 @@
 <template>
     <div class="vue-resume">
         {{fetching}} - {{msg}}
+        <loading :show="fetching"></loading>
         <resume-header></resume-header>
         <resume-content></resume-content>
         <resume-footer></resume-footer>
-        <resume-float-right></resume-float-right>
+        <float-right></float-right>
     </div>
 </template>
 
@@ -17,12 +18,16 @@
 </style>
 
 <script>
-    import {mapGetters,mapState} from 'vuex';
+    import {mapGetters} from 'vuex';
 
-    import ResumeHeader from '@components/Header.vue';
-    import ResumeContent from '@components/Content.vue';
-    import ResumeFooter from '@components/Footer.vue';
-    import ResumeFloatRight from '@components/FloatRight.vue';
+    import Loading from '@components/Loading.vue';
+    import ResumeHeader from '@components/ResumeHeader.vue';
+    import ResumeContent from '@components/ResumeContent.vue';
+    import ResumeFooter from '@components/ResumeFooter.vue';
+    import FloatRight from '@components/FloatRight.vue';
+
+    //:todo='fetching' 是传递父组件的属性fetching给子组件
+    //todo='fetching' 是传递一个字符串('fetching')给子组件
 
     export default {
         data(){
@@ -44,7 +49,8 @@
             ResumeHeader,
             ResumeContent,
             ResumeFooter,
-            ResumeFloatRight
+            FloatRight,
+            Loading
         }
     };
 </script>
