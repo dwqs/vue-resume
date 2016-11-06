@@ -2,7 +2,7 @@
     <aside class="float-right">
         <ul>
             <li v-for="item in items">
-                <a :href="item.link" target="_blank">{{item.text}}</a>
+                <a :href="item.link" @click.stop.prevent="printResume(item.isPrint)" target="_blank">{{item.text}}</a>
             </li>
         </ul>
     </aside>
@@ -43,18 +43,34 @@
             return{
                 items:[{
                     text:"源代码",
-                    link:"https://github.com/dwqs/vue-resume.git"
+                    link:"https://github.com/dwqs/vue-resume.git",
+                    isPrint: false
                 },{
                     text:"Github",
-                    link:"https://github.com/dwqs"
+                    link:"https://github.com/dwqs",
+                    isPrint:false
                 },{
                     text:"Blog",
-                    link:"https://github.com/dwqs/blog"
+                    link:"https://github.com/dwqs/blog",
+                    isPrint:false
                 },{
                     text:"PDF下载",
-                    link:"#"
+                    link:"#",
+                    isPrint:false
+                },{
+                    text:"打印简历",
+                    link:"#",
+                    isPrint:true
                 }]
             };
+        },
+
+        methods:{
+            printResume(isPrint){
+                if(isPrint){
+                    window.print();
+                }
+            }
         }
     };
 </script>

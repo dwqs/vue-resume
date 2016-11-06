@@ -5,6 +5,7 @@
 'use sreict';
 
 import './common.css';
+import './print.less';
 //require('./common./css|less/');
 //import './xxx.less';
 
