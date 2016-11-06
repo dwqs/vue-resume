@@ -1,1 +1,1 @@
-Online Resume Template powered by vue, a small project for learning vue in practice.
+OPersonal Resume Template is powered by Vue,Node.js & Webpack, a small project for learning vue in practice.
