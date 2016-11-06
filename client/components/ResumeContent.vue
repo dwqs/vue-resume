@@ -1,7 +1,7 @@
 <template>
-    <div class="resume-content">
+    <article class="resume-content">
         {{data.name}} - {{msg}}
-    </div>
+    </article>
 </template>
 
 <style scoped lang="less">

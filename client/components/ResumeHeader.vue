@@ -1,7 +1,7 @@
 <template>
-    <div class="resume-header">
+    <header class="resume-header">
         {{msg}} - {{data.age}}
-    </div>
+    </header>
 </template>
 
 <style scoped lang="less">

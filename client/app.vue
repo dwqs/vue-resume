@@ -1,6 +1,5 @@
 <template>
     <div class="vue-resume">
-        {{fetching}} - {{msg}}
         <loading :show="fetching"></loading>
         <resume-header></resume-header>
         <resume-content></resume-content>

@@ -13,7 +13,7 @@
   "scripts": {
     "dev:build": "webpack-dev-server --config ./build/webpack.dev.config.js",
     "dev":"cross-env NODE_ENV=dev node --harmony ./server/index",
-    "prod:build": "webpack --progress --hide-modules --display-error-details --config ./build/webpack.prod.config.js",
+    "prod:build": "./node_modules/.bin/webpack --progress --hide-modules --display-error-details --config ./build/webpack.prod.config.js",
     "prod":"cross-env NODE_ENV=prod node --harmony ./server/index"
   },
   "dependencies": {
