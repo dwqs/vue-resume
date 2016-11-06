@@ -4,10 +4,19 @@
 
 body{
     background: #e0e0e0;
+    text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
 
 div,footer,section,header,article,nav,aside{
     font-family: ".PingFang-SC-Light",微软雅黑,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #616161;
+}
+
+@font-face{
+    font-family:FontAwesome;
+    src:url('/fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('/fonts/fontawesome-webfont.woff2') format('woff2'),url('/fonts/fontawesome-webfont.woff') format('woff'),
+        url('/fonts/fontawesome-webfont.ttf') format('truetype'),url('/fonts/fontawesome-webfont.svg') format('svg');
+    font-weight:400;
+    font-style:normal
 }
