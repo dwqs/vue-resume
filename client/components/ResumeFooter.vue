@@ -1,7 +1,7 @@
 <template>
     <footer class="resume-footer">
         <p>
-            {{text}} by <a href="https://github.com/dwqs/vue-resume.git">Pomy's resume generator</a>
+            {{text}} by <a href="https://github.com/dwqs/vue-resume.git" target="_blank">Pomy's resume generator</a>
         </p>
     </footer>
 </template>
