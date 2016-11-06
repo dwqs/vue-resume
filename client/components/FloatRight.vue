@@ -2,7 +2,7 @@
     <aside class="float-right">
         <ul>
             <li v-for="item in items">
-                <a href="item.link" target="_blank">{{item.text}}</a>
+                <a :href="item.link" target="_blank">{{item.text}}</a>
             </li>
         </ul>
     </aside>
