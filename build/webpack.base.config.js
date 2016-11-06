@@ -26,6 +26,10 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test:/\.css$/,
+                loader:'vue-style!css'
+            },
+            {
                 test: /\.(png|jpg|gif|jpeg)$/,
                 loader: 'url',
                 query: {
@@ -35,7 +39,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|jpeg)$/,
-                loader: 'file-loader'
+                loader: 'file'
             }
         ]
     },

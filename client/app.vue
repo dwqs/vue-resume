@@ -10,11 +10,14 @@
 </template>
 
 <style scoped>
-    .vue-resume{
-        margin: 0 auto;
-        width: 960px;
-        border: 1px solid blue
+    @media screen and (min-width:960px){
+        .vue-resume{
+            margin: 0 auto;
+            width: 960px;
+            border: 1px solid blue
+        }
     }
+
 </style>
 
 <script>

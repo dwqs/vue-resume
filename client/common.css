@@ -1,0 +1,9 @@
+body{
+    background: #e0e0e0;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}

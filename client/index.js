@@ -9,6 +9,8 @@ import 'babel-polyfill';
 import Vue from 'vue';
 import $ from 'jquery';
 
+import './common.css';
+
 import store from './vuex/index';
 import App from './App.vue';
 
