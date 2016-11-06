@@ -1,9 +1,13 @@
 body{
     background: #e0e0e0;
     -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 *{
     box-sizing: border-box;
+}
+
+div{
+    font-family: ".PingFang-SC-Light",微软雅黑,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #616161;
 }
