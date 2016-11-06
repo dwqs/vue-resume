@@ -1,12 +1,14 @@
 <template>
     <article class="resume-content" v-show="show">
-        {{data.name}} content
+       content
     </article>
 </template>
 
 <style scoped lang="less">
     .resume-content{
-        color:blue
+        margin-top: 20px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
     }
 </style>
 

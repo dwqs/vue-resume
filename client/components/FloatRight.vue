@@ -35,7 +35,11 @@
                 height: 38px;
                 line-height: 38px;
                 padding-left: 10px;
-                color: #FFFFFF;
+                color: rgba(255,255,255,0.8);
+                transition: all .3s ease-out;
+                &:hover{
+                    color: rgba(255,255,255,1);
+                }
             }
         }
     }

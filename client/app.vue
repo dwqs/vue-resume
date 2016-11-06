@@ -1,22 +1,23 @@
 <template>
-    <div class="vue-resume">
+    <main class="vue-resume">
         <loading :show="fetching"></loading>
         <resume-header :show="!fetching"></resume-header>
         <resume-content :show="!fetching"></resume-content>
         <float-right></float-right>
         <resume-footer></resume-footer>
-    </div>
+    </main>
 </template>
 
 <style scoped lang="less">
     //@import "./test.less";
     @media screen and (min-width:960px){
-        .vue-resume{
-            margin: 0 auto;
-            width: 960px;
-            border: 1px solid blue;
-            background-color:#f0f2f1;
-        }
+        //todo
+    }
+    .vue-resume{
+        margin: 15px auto;
+        width: 960px;
+        border: 1px solid blue;
+        background-color: #efefef;
     }
 
 </style>

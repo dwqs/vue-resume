@@ -1,5 +1,11 @@
 {
+  "resumeTitle": "袁康 - 个人简历",
+  "jobTitle":"前端攻城狮",
   "name":"袁康",
-  "age": 22,
-  "girl_friend":"李敏怡"
+  "avatar":"https://sfault-avatar.b0.upaiyun.com/123/634/1236348520-5577e83608a48_huge256",
+  "email":"pomysky@gmail.com",
+  "github":"https://github.com/dwqs",
+  "blog":"https://github.com/dwqs/blog",
+  "weibo":"http://weibo.com/rebgin",
+  "weiboNickname":"会飞的Pikachu"
 }
