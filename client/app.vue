@@ -1,11 +1,11 @@
 <template>
-    <main class="vue-resume">
+    <div class="vue-resume">
         <loading :show="fetching"></loading>
         <resume-header :show="!fetching"></resume-header>
         <resume-content :show="!fetching"></resume-content>
         <float-right></float-right>
         <resume-footer></resume-footer>
-    </main>
+    </div>
 </template>
 
 <style scoped lang="less">
