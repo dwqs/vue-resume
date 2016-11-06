@@ -1,6 +1,6 @@
 <template>
-    <header class="resume-header">
-        {{msg}} - {{data.age}}11
+    <header class="resume-header" v-show="show">
+        {{data.age}} header
     </header>
 </template>
 
@@ -30,10 +30,8 @@
 
     export default{
 
-        data(){
-            return {
-                msg:'header'
-            }
+        props:{
+            show:Boolean
         },
 
         computed: {

@@ -1,6 +1,6 @@
 <template>
-    <article class="resume-content">
-        {{data.name}} - {{msg}}
+    <article class="resume-content" v-show="show">
+        {{data.name}} content
     </article>
 </template>
 
@@ -14,10 +14,9 @@
     import {mapState} from 'vuex';
 
     export default{
-        data (){
-            return{
-                msg:'resume-content'
-            };
+
+        props:{
+            show:Boolean
         },
 
         computed: {

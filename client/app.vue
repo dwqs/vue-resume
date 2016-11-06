@@ -1,8 +1,8 @@
 <template>
     <div class="vue-resume">
         <loading :show="fetching"></loading>
-        <resume-header></resume-header>
-        <resume-content></resume-content>
+        <resume-header :show="!fetching"></resume-header>
+        <resume-content :show="!fetching"></resume-content>
         <float-right></float-right>
         <resume-footer></resume-footer>
     </div>
@@ -15,7 +15,7 @@
             margin: 0 auto;
             width: 960px;
             border: 1px solid blue;
-            background-color:#f0f2f1
+            background-color:#f0f2f1;
         }
     }
 
