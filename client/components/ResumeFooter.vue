@@ -1,12 +1,25 @@
 <template>
-    <div class="resume-footer">
-        {{msg}}
-    </div>
+    <footer class="resume-footer">
+        <p>
+            {{text}} by <a href="https://github.com/dwqs/vue-resume.git">Pomy's resume generator</a>
+        </p>
+    </footer>
 </template>
 
-<style scoped>
+<style scoped lang="less">
     .resume-footer{
-        color:blue
+        position: absolute;
+        padding: 20px 6px;
+        z-index:1;
+        left:0;
+        bottom:0;
+        width:100%;
+        text-align:center;
+        font-size:16px;
+        color:#333;
+        a{
+            color:#00BFA5
+        }
     }
 </style>
 
@@ -15,7 +28,7 @@
     export default{
         data (){
             return{
-                msg:'resume-footer'
+                text:'This resume is powered with Vue,Node.js and Webpack'
             };
         }
     };

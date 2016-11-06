@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="less">
     .resume-loading{
         background-color:#ff0000;
     }

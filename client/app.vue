@@ -4,17 +4,19 @@
         <loading :show="fetching"></loading>
         <resume-header></resume-header>
         <resume-content></resume-content>
-        <resume-footer></resume-footer>
         <float-right></float-right>
+        <resume-footer></resume-footer>
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="less">
+    //@import "./test.less";
     @media screen and (min-width:960px){
         .vue-resume{
             margin: 0 auto;
             width: 960px;
-            border: 1px solid blue
+            border: 1px solid blue;
+            background-color:#f0f2f1
         }
     }
 

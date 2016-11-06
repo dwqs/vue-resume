@@ -30,6 +30,10 @@ module.exports = {
                 loader:'vue-style!css'
             },
             {
+                test: /\.less$/,
+                loader: 'vue-style!css!less'
+            },
+            {
                 test: /\.(png|jpg|gif|jpeg)$/,
                 loader: 'url',
                 query: {

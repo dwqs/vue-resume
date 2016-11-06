@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="less">
     .float-right{
         color:blue
     }
