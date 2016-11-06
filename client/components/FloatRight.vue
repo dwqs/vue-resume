@@ -1,17 +1,8 @@
 <template>
     <aside class="float-right">
         <ul>
-            <li>
-                <a href="https://github.com/dwqs/vue-resume.git" :target="target">源代码</a>
-            </li>
-            <li>
-                <a href="https://github.com/dwqs" :target="target">Github</a>
-            </li>
-            <li>
-                <a href="https://github.com/dwqs/blog" :target="target">Blog</a>
-            </li>
-            <li>
-                <a href="#" :target="target">PDF下载</a>
+            <li v-for="item in items">
+                <a href="item.link" target="_blank">{{item.text}}</a>
             </li>
         </ul>
     </aside>
@@ -50,7 +41,19 @@
     export default{
         data (){
             return{
-                target:'_blank'
+                items:[{
+                    text:"源代码",
+                    link:"https://github.com/dwqs/vue-resume.git"
+                },{
+                    text:"Github",
+                    link:"https://github.com/dwqs"
+                },{
+                    text:"Blog",
+                    link:"https://github.com/dwqs/blog"
+                },{
+                    text:"PDF下载",
+                    link:"#"
+                }]
             };
         }
     };
