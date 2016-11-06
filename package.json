@@ -11,7 +11,7 @@
     "url": "https://github.com/dwqs/resume.git"
   },
   "scripts": {
-    "dev:build": "webpack-dev-server --config ./build/webpack.dev.config.js",
+    "dev:build": "./node_modules/.bin/webpack-dev-server --config ./build/webpack.dev.config.js",
     "dev":"cross-env NODE_ENV=dev node --harmony ./server/index",
     "prod:build": "./node_modules/.bin/webpack --progress --hide-modules --display-error-details --config ./build/webpack.prod.config.js",
     "prod":"cross-env NODE_ENV=prod node --harmony ./server/index"
@@ -27,8 +27,7 @@
     "koa-router": "^5.0.0",
     "koa-static": "^1.4.5",
     "koa-swig": "^2.1.0",
-    "koa-json": "^1.1.1",
-    "webpack": "^1.12.2"
+    "koa-json": "^1.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",
@@ -48,6 +47,7 @@
     "vue-style-loader": "^1.0.0",
     "url-loader": "^0.5.7",
     "file-loader": "^0.8.4",
+    "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
   "maintainers": [{
