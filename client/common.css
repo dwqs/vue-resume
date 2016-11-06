@@ -7,7 +7,7 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 
-div,footer,section,header,article,nav{
+div,footer,section,header,article,nav,aside{
     font-family: ".PingFang-SC-Light",微软雅黑,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #616161;
 }
