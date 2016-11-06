@@ -1,1 +1,1 @@
-OPersonal Resume Template is powered by Vue,Node.js & Webpack, a small project for learning vue in practice.
+A Personal Resume Template is powered by Vue,Node.js & Webpack, and it also is a small project for learning vue in practice.
