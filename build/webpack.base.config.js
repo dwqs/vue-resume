@@ -4,6 +4,7 @@
 'use sreict';
 
 var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -27,11 +28,13 @@ module.exports = {
             },
             {
                 test:/\.css$/,
-                loader:'vue-style!css'
+                //loader:'vue-style!css'
+                loader:ExtractTextPlugin.extract('vue-style','css')
             },
             {
                 test: /\.less$/,
-                loader: 'vue-style!css!less'
+                //loader: 'vue-style!css!less'
+                loader:ExtractTextPlugin.extract('vue-style','css!less?sourceMap')
             },
             {
                 test: /\.(png|jpg|gif|jpeg)$/,
@@ -56,6 +59,9 @@ module.exports = {
     externals: {
         "jquery": "jQuery"
     },
+    plugins:[
+        new ExtractTextPlugin("styles.css")
+    ]
     // vue: {
     //     loaders: {
     //         js: 'babel!eslint'

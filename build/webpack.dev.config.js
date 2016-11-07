@@ -28,14 +28,15 @@ devConfig.devServer = {
     noInfo: true,
     hot: true,
     port:3000,
-    debug: false,
+    debug:true,
     quite: false,
     inline: true,
     progress: true,
     historyApiFallback: true,
     colors: true,
     stats: 'normal',
-    contentBase:'./public/assets'
+    //contentBase:'./public/assets',  same as follow
+    publicPath:"http://localhost:3000/assets"
 };
 
 module.exports = devConfig;

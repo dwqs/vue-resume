@@ -18,6 +18,9 @@ prodConfig.plugins = (prodConfig.plugins || []).concat([
     new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false
+        },
+        output: {
+            comments: false
         }
     }),
     new webpack.optimize.OccurenceOrderPlugin()
