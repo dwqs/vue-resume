@@ -27,6 +27,13 @@ $(()=>{
 
 // same as
 
+// const app = new Vue({
+//     store,
+//     ...App
+// });
+//
+// app.$mount('#resume-vue');
+
 // new Vue({
 //     el: '#resume-vue',
 //     render: h => h(App)
