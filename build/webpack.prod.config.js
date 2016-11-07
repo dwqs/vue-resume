@@ -8,7 +8,7 @@ var path = require('path');
 var webpack = require('webpack');
 var prodConfig = require('./webpack.base.config');
 
-prodConfig.devtool = 'source-map';
+//prodConfig.devtool = 'source-map';
 prodConfig.plugins = (prodConfig.plugins || []).concat([
     new webpack.DefinePlugin({
         'process.env': {
