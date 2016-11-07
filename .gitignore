@@ -1,14 +1,13 @@
 .idea/
 
-node_modules
-public/images/
-public/fonts/
-dist
+node_modules/
+
+public/
+dist/
 npm-debug.log
 *.log
 .DS_Store
 Thumbs.db
 *.db
 test.js
-test
-dist
+test/

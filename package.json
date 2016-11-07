@@ -1,5 +1,5 @@
 {
-  "name": "my-resume",
+  "name": "my-resume-be",
   "version": "0.0.1",
   "author":"pomy",
   "description": "online resume",
@@ -8,18 +8,13 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dwqs/resume.git"
+    "url": "https://github.com/dwqs/vue-resume.git"
   },
   "scripts": {
-    "dev:build": "./node_modules/.bin/webpack-dev-server --config ./build/webpack.dev.config.js",
     "dev":"cross-env NODE_ENV=development node --harmony ./server/index",
-    "prod:build": "./node_modules/.bin/webpack --progress --hide-modules --config ./build/webpack.prod.config.js",
     "prod":"cross-env NODE_ENV=production node --harmony ./server/index"
   },
   "dependencies": {
-    "vue":"^2.0.0",
-    "vuex":"^2.0.0",
-    "babel-polyfill": "^6.9.1",
     "koa": "^0.20.0",
     "koa-bodyparser": "^2.0.1",
     "koa-compress": "^1.0.8",
@@ -30,30 +25,8 @@
     "koa-json": "^1.1.1"
   },
   "devDependencies": {
-    "babel-core": "^6.1.2",
-    "babel-loader": "^6.1.0",
-    "babel-plugin-transform-runtime": "^6.1.2",
-    "babel-preset-es2015": "^6.1.2",
-    "babel-preset-stage-0": "^6.1.2",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "babel-runtime": "^5.8.0",
-    "babel-eslint": "^4.1.8",
     "eslint": "^1.10.3",
-    "eslint-loader": "^1.2.0",
-    "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
-    "less": "^2.5.3",
-    "less-loader": "^2.2.1",
-    "vue-loader": "^9.7.0",
-    "gulp": "^3.9.1",
-    "gulp-rev": "^7.1.0",
-    "gulp-util": "^3.0.7",
-    "del": "^1.2.0",
-    "vue-style-loader": "^1.0.0",
-    "url-loader": "^0.5.7",
-    "file-loader": "^0.8.4",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0"
+    "cross-env": "^3.0.0"
   },
   "maintainers": [{
       "name": "pomy",
