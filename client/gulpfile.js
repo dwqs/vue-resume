@@ -15,10 +15,11 @@ var webpackConfig = require('../build/webpack.dev.config');
 
 gulp.task('images', function () {
     return gulp.src('./static/images/*')
-        .pipe(rev())
-        .pipe(gulp.dest('../public/images'))
-        .pipe(rev.manifest('manifest.json'))
         .pipe(gulp.dest('../public/images'));
+        // .pipe(rev())
+        // .pipe(gulp.dest('../public/images'))
+        // .pipe(rev.manifest('manifest.json'))
+        // .pipe(gulp.dest('../public/images'));
 });
 
 gulp.task('fonts', function () {
@@ -36,7 +37,7 @@ gulp.task('dev', ['images','fonts'],function(callback) {
     });
 });
 
-// 清空图片、样式、js
+// 清空静态资源
 gulp.task('clean', function() {
-    del('public/*');
+    del('../public/*',{read: false, force: true});
 });

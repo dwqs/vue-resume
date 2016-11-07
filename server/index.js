@@ -13,13 +13,14 @@ let koaJson = require('koa-json');
 let bodyParser = require('koa-bodyparser');
 let render = require('koa-swig');
 
+let controller = require('./router');
+
 let app = koa();
-let router = require('koa-router')();
 
 app.context.render = render({
-    root: path.resolve(__dirname, '../public'),
+    root: path.resolve(__dirname, './views'),
     autoescape: true,
-    cache: 'memory',
+    cache: process.env.NODE_ENV != 'production' ? false : 'memory',
     ext: 'html'
 });
 
@@ -32,15 +33,7 @@ app.use(compress());
 // Logger
 app.use(logger());
 
-router.get('/resume',function *() {
-    this.response.set("Content-Type", "application/json;charset=utf-8");
-    let resume = require('./resume.json');
-    this.response.body = {
-        resume: resume
-    };
-});
-
-app.use(router.middleware());
+controller.register(app);
 
 app.listen('9002','127.0.0.1',  () => {
     console.log(process.env.NODE_ENV,'listening on port 9002...');
