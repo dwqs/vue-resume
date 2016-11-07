@@ -1,7 +1,8 @@
 .idea/
 
 node_modules
-#assets
+public/images/
+public/fonts/
 dist
 npm-debug.log
 *.log

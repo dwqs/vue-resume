@@ -13,7 +13,9 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../public/assets/'),
-        publicPath: path.resolve(__dirname, '/assets/')
+        //publicPath: path.resolve(__dirname, '/assets/'),
+        publicPath:"http://localhost:3000/assets",
+        sourceMapFilename: '[file].map'
     },
     module: {
         loaders: [
@@ -28,8 +30,9 @@ module.exports = {
             },
             {
                 test:/\.css$/,
-                //loader:'vue-style!css'
-                loader:ExtractTextPlugin.extract('vue-style','css')
+                loader:'vue-style!css'
+                //因为加入了fontAwesome 对于css就不用ExtractTextPlugin处理了,不然字体加载不了
+                //loader:ExtractTextPlugin.extract('vue-style','css')
             },
             {
                 test: /\.less$/,

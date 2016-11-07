@@ -4,7 +4,7 @@
            page1
        </article>
        <article id="paga2">
-            page2
+            page211
        </article>
     </main>
 </template>

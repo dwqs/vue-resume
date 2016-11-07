@@ -8,9 +8,9 @@ var webpack = require('webpack');
 var devConfig = require('./webpack.base.config');
 
 devConfig.entry.app.unshift(
-    "webpack-dev-server/client?http://localhost:3000/",
+    "webpack/hot/dev-server",
+    "webpack-dev-server/client?http://localhost:3000/"
     //'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    "webpack/hot/dev-server"
 );
 
 devConfig.plugins = (devConfig.plugins || []).concat([
@@ -35,7 +35,7 @@ devConfig.devServer = {
     historyApiFallback: true,
     colors: true,
     stats: 'normal',
-    //contentBase:'./public/assets',  same as follow
+    contentBase:'/public/assets',
     publicPath:"http://localhost:3000/assets"
 };
 
