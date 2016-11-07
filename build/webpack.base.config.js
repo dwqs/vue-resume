@@ -27,7 +27,7 @@ module.exports = {
             {
                 test: /\.less$/,
                 //loader: 'vue-style!css!less'
-                loader:ExtractTextPlugin.extract('vue-style','css!less')
+                loader:ExtractTextPlugin.extract('vue-style','css!less?sourceMap')
             },
             {
                 test: /\.(png|jpg|gif|jpeg)$/,
