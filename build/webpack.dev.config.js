@@ -9,6 +9,7 @@ var devConfig = require('./webpack.base.config');
 
 devConfig.entry.app.unshift(
     "webpack-dev-server/client?http://localhost:3000/",
+    //'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
     "webpack/hot/dev-server"
 );
 
