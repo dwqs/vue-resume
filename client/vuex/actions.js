@@ -4,12 +4,13 @@
 
 import * as types from './mutation-types';
 
-export const beforeGetResumeData = ({commit}) => {
+export const beforeGetResumeData = (store) => {
+    let {state,commit,dispatch,rootState,getters} = store;
     commit(types.BEFORE_GET_RESUME_DATA);
 };
 
 export const getResumeData = ({commit,dispatch}) => {
-    dispatch('beforeGetResumeData');
+    dispatch('beforeGetResumeData'); //same as commit(types.BEFORE_GET_RESUME_DATA)
     fetch('/resume').then((res)=>{
         return res.json();
     }).then((data)=>{

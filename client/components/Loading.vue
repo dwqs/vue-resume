@@ -1,29 +1,59 @@
 <template>
     <div class="resume-loading" v-show="show">
         <div class="loading-icon">正在加载...</div>
+        <span>正在拼命加载中...</span>
     </div>
 </template>
 
 <style scoped lang="less">
     .resume-loading{
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        position: absolute;
+        display: inline-block;
+        position: fixed;
         top: 0;
-        right: 0;
-        bottom: 0;
         left: 0;
+        width:100%;
+        height: 100%;
+        text-align: center;
+        font-size: 0;
         z-index: 11;
         background-color:#f0f2f1;
-        text-align: center;
-        .loading-icon{
-            flex: 1;
-            &:before {
-                content: '\f110';
-                font-family: FontAwesome;
-                padding-right: 5px;
+        @keyframes loadingCircle {
+            0% {
+                transform-origin: 50% 50%;
+                transform: rotate(0deg);
             }
+            100% {
+                transform-origin: 50% 50%;
+                transform: rotate(360deg);
+            }
+        }
+        &:before{
+            //垂直居中
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+            width: 0;
+            height: 100%;
+        }
+        .loading-icon{
+            //steps:http://www.cnblogs.com/aaronjs/p/4642015.html
+            animation: 0.85s loadingCircle steps(8) infinite;
+            width: 16px;
+            height: 16px;
+            background-image:url(/images/loading.png);
+            background-size: cover;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{
+            vertical-align: middle;
+            position: relative;
+            display: inline-block;
+            margin-left: 7px;
+            color: #118BFA;
+            font-size: 14px;
         }
     }
 </style>

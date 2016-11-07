@@ -28,8 +28,13 @@ devConfig.devServer = {
     noInfo: true,
     hot: true,
     port:3000,
-    debug: true,
+    debug: false,
     quite: false,
+    inline: true,
+    progress: true,
+    historyApiFallback: true,
+    colors: true,
+    stats: 'normal',
     contentBase:'./public/assets'
 };
 
