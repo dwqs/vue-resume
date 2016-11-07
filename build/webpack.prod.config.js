@@ -8,7 +8,6 @@ var path = require('path');
 var webpack = require('webpack');
 var prodConfig = require('./webpack.base.config');
 
-prodConfig.devtool = 'source-map';
 prodConfig.plugins = (prodConfig.plugins || []).concat([
     new webpack.DefinePlugin({
         'process.env': {
@@ -22,12 +21,12 @@ prodConfig.plugins = (prodConfig.plugins || []).concat([
         output: {
             comments: false
         },
-        minimize: true,
         sourceMap: true,   //线上生成source-map
         mangle: true
     }),
     new webpack.optimize.OccurenceOrderPlugin()
 ]);
+prodConfig.devtool = 'source-map';
 
 module.exports = Object.assign({},prodConfig,{
     entry: {
@@ -36,7 +35,7 @@ module.exports = Object.assign({},prodConfig,{
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../public/assets/'),
-        publicPath: path.resolve(__dirname, '/assets/'),
-        sourceMapFilename: '[file].map'
+        publicPath: path.resolve(__dirname, '/assets/')
+        //sourceMapFilename: '[file].map'
     }
 });
