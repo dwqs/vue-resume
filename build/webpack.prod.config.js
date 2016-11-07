@@ -34,7 +34,7 @@ module.exports = Object.assign({},prodConfig,{
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../public/assets/'),
-        publicPath: path.resolve(__dirname, '/assets/')
+        publicPath: path.resolve(__dirname, '/assets/'),
         sourceMapFilename: '[file].map'
     }
 });
