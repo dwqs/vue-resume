@@ -18,7 +18,7 @@ devConfig.plugins = (devConfig.plugins || []).concat([
     new webpack.NoErrorsPlugin()
 ]);
 
-devConfig.devtool = 'eval-source-map';
+devConfig.devtool = 'cheap-module-eval-source-map';   //防中文乱码
 devConfig.devServer = {
     noInfo: true,
     hot: true,

@@ -10,13 +10,13 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.vue$/,
-                loader: 'vue'
-            },
-            {
                 test: /\.js$/,
                 loader: 'babel!eslint',
-                exclude: /node_modules/
+                exclude: /node_modules/  //babel必须放在第一位,不然sourcemap是编译后的代码
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue'
             },
             {
                 test:/\.css$/,

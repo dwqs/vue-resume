@@ -22,7 +22,9 @@ prodConfig.plugins = (prodConfig.plugins || []).concat([
         output: {
             comments: false
         },
-        minimize: true
+        minimize: true,
+        sourceMap: true,   //线上生成source-map
+        mangle: true
     }),
     new webpack.optimize.OccurenceOrderPlugin()
 ]);
