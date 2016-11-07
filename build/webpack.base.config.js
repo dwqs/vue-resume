@@ -13,8 +13,6 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../public/assets/'),
-        //publicPath: path.resolve(__dirname, '/assets/'),
-        publicPath:"http://localhost:3000/assets",
         sourceMapFilename: '[file].map'
     },
     module: {

@@ -13,6 +13,9 @@ devConfig.entry.app.unshift(
     //'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
 );
 
+//将publicPath设置为webpack-dev-server服务器下资源目录的绝对路径,不然不会是局部更新,而是重新记载页面
+devConfig.entry.output.publicPath = "http://localhost:3000/assets";
+
 devConfig.plugins = (devConfig.plugins || []).concat([
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({

@@ -4,10 +4,13 @@
 
 'use sreict';
 
+var path = require('path');
 var webpack = require('webpack');
 var prodConfig = require('./webpack.base.config');
 
 prodConfig.devtool = 'source-map';
+
+prodConfig.entry.output.publicPath = path.resolve(__dirname, '/assets/');
 
 prodConfig.plugins = (prodConfig.plugins || []).concat([
     new webpack.DefinePlugin({
