@@ -4,17 +4,9 @@
 
 'use sreict';
 
+var path = require('path');
 var webpack = require('webpack');
 var devConfig = require('./webpack.base.config');
-
-devConfig.entry.app.unshift(
-    "webpack/hot/dev-server",
-    "webpack-dev-server/client?http://localhost:3000/"
-    //'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-);
-
-//将publicPath设置为webpack-dev-server服务器下资源目录的绝对路径,不然不会是局部更新,而是重新记载页面
-devConfig.entry.output.publicPath = "http://localhost:3000/assets";
 
 devConfig.plugins = (devConfig.plugins || []).concat([
     new webpack.HotModuleReplacementPlugin(),
@@ -42,4 +34,19 @@ devConfig.devServer = {
     publicPath:"http://localhost:3000/assets"
 };
 
-module.exports = devConfig;
+module.exports = Object.assign({},devConfig,{
+    entry: {
+        app:[
+            "webpack/hot/dev-server",
+            "webpack-dev-server/client?http://localhost:3000/",
+            path.resolve(__dirname, '../client/index.js')
+        ]
+    },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, '../public/assets/'),
+        //将publicPath设置为webpack-dev-server服务器下资源目录的绝对路径,不然不会是局部更新,而是重新记载页面
+        publicPath:"http://localhost:3000/assets",
+        sourceMapFilename: '[file].map'
+    }
+});

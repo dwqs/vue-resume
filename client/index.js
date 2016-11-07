@@ -4,8 +4,9 @@
 
 'use sreict';
 
-import './common.css';
-import './print.less';
+import './styles/reset.css';
+import './styles/common.css';
+import './styles/print.less';
 //require('./common./css|less/');
 //import './xxx.less';
 

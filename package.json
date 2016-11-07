@@ -48,6 +48,7 @@
     "gulp": "^3.9.1",
     "gulp-rev": "^7.1.0",
     "gulp-util": "^3.0.7",
+    "del": "^1.2.0",
     "vue-style-loader": "^1.0.0",
     "url-loader": "^0.5.7",
     "file-loader": "^0.8.4",

@@ -9,9 +9,6 @@ var webpack = require('webpack');
 var prodConfig = require('./webpack.base.config');
 
 prodConfig.devtool = 'source-map';
-
-prodConfig.entry.output.publicPath = path.resolve(__dirname, '/assets/');
-
 prodConfig.plugins = (prodConfig.plugins || []).concat([
     new webpack.DefinePlugin({
         'process.env': {
@@ -29,4 +26,14 @@ prodConfig.plugins = (prodConfig.plugins || []).concat([
     new webpack.optimize.OccurenceOrderPlugin()
 ]);
 
-module.exports = prodConfig;
+module.exports = Object.assign({},prodConfig,{
+    entry: {
+        app:[path.resolve(__dirname, '../client/index.js')]
+    },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, '../public/assets/'),
+        publicPath: path.resolve(__dirname, '/assets/'),
+        sourceMapFilename: '[file].map'
+    }
+});

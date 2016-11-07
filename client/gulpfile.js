@@ -3,7 +3,9 @@
  */
 
 'use strict';
+
 var gulp = require('gulp');
+var del = require('del');
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
@@ -13,7 +15,6 @@ var webpackConfig = require('../build/webpack.dev.config');
 
 gulp.task('images', function () {
     return gulp.src('./static/images/*')
-        .pipe(gulp.dest('../public/images'))
         .pipe(rev())
         .pipe(gulp.dest('../public/images'))
         .pipe(rev.manifest('manifest.json'))
@@ -33,4 +34,9 @@ gulp.task('dev', ['images','fonts'],function(callback) {
         console.log('bundle is valid');
         //这里监听文件改变然后 重新编译js 没时间搞了,后面再看吧
     });
+});
+
+// 清空图片、样式、js
+gulp.task('clean', function() {
+    del('public/*');
 });
