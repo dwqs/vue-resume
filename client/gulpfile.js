@@ -41,3 +41,6 @@ gulp.task('dev', ['images','fonts'],function(callback) {
 gulp.task('clean', function() {
     del('../public/*',{read: false, force: true});
 });
+
+//production
+gulp.task('build', ['images','fonts'],function() {});
