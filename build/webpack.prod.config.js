@@ -28,11 +28,9 @@ prodConfig.plugins = (prodConfig.plugins || []).concat([
 ]);
 
 module.exports = Object.assign({},prodConfig,{
-    entry: {
-        app:[path.resolve(__dirname, '../client/index.js')]
-    },
+    entry: path.resolve(__dirname, '../client/index.js'),
     output: {
-        filename: '[name].js',
+        filename: 'app.js',
         path: path.resolve(__dirname, '../public/assets/'),
         publicPath: path.resolve(__dirname, '/assets/')
         //sourceMapFilename: '[file].map'
