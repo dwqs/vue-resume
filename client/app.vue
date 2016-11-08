@@ -1,6 +1,5 @@
 <template>
     <div class="vue-resume">
-        <loading :show="fetching"></loading>
         <resume-header :show="!fetching"></resume-header>
         <resume-content :show="!fetching"></resume-content>
         <float-right></float-right>
@@ -27,7 +26,7 @@
 <script>
     import {mapGetters} from 'vuex';
 
-    import Loading from '@components/Loading.vue';
+    //import Loading from '@components/Loading.vue';
     import ResumeHeader from '@components/ResumeHeader.vue';
     import ResumeContent from '@components/ResumeContent.vue';
     import ResumeFooter from '@components/ResumeFooter.vue';
@@ -56,8 +55,7 @@
             ResumeHeader,
             ResumeContent,
             ResumeFooter,
-            FloatRight,
-            Loading
+            FloatRight
         }
     };
 </script>
