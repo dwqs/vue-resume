@@ -10,6 +10,10 @@ var WebpackMd5Hash = require('webpack-md5-hash');
 var prodConfig = require('./webpack.base.config');
 
 prodConfig.plugins = (prodConfig.plugins || []).concat([
+    new WebpackMd5Hash(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(),
+
     new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: '"production"'
@@ -24,11 +28,8 @@ prodConfig.plugins = (prodConfig.plugins || []).concat([
         },
         sourceMap: true,   //线上生成source-map
         mangle: true
-    }),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new WebpackMd5Hash()
+    })
 ]);
-prodConfig.devtool = 'source-map';
 
 module.exports = Object.assign({},prodConfig,{
     entry: {
@@ -39,5 +40,6 @@ module.exports = Object.assign({},prodConfig,{
         path: path.resolve(__dirname, '../public/assets/'),
         publicPath: path.resolve(__dirname, '/assets/'),
         sourceMapFilename: '[file].map'
-    }
+    },
+    devtool:'#source-map'
 });

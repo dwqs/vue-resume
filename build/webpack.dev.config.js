@@ -18,7 +18,6 @@ devConfig.plugins = (devConfig.plugins || []).concat([
     new webpack.NoErrorsPlugin()
 ]);
 
-devConfig.devtool = 'cheap-module-eval-source-map';   //防中文乱码
 devConfig.devServer = {
     noInfo: true,
     hot: true,
@@ -48,5 +47,6 @@ module.exports = Object.assign({},devConfig,{
         //将publicPath设置为webpack-dev-server服务器下资源目录的绝对路径,不然不会是局部更新,而是重新记载页面
         publicPath:"http://localhost:3000/assets",
         sourceMapFilename: '[file].map'
-    }
+    },
+    devtool:'#cheap-module-eval-source-map'  //防中文乱码
 });

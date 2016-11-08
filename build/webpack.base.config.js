@@ -4,7 +4,10 @@
 'use sreict';
 
 var path = require('path');
+var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+var vendor = ['vue', 'vuex', 'babel-polyfill'];
 
 module.exports = {
     module: {
@@ -53,7 +56,11 @@ module.exports = {
         "jquery": "jQuery"
     },
     plugins:[
-        new ExtractTextPlugin("styles.css")
+        new ExtractTextPlugin("styles.css"),
+        new webpack.optimize.CommonsChunkPlugin({
+            name:"vendor",
+            filename:"vendor.js"
+        })
     ]
     // vue: {
     //     loaders: {

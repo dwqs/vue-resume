@@ -6,19 +6,9 @@
 let env = process.env.NODE_ENV || 'development';
 
 let renderOnline = function*(projectName, bundleUrl,title, tpl) {
-    // if (script.scripts && script.scripts.length > 0) {
-    //     this.body = yield render(tpl, {
-    //         scripts: script.scripts,
-    //         styles: script.styles,
-    //         title: title
-    //     });
-    // } else {
-    //     this.body = yield render(tpl, {
-    //         title: title
-    //     });
-    // }
+    
     this.body = yield this.render(tpl, {
-        scripts:[bundleUrl],
+        scripts:['/assets/vendor.js',bundleUrl],
         styles: [],
         title: title
     });
@@ -29,6 +19,7 @@ let renderPage = function*(projectName, bundleUrl, title, tpl) {
     if (env === 'development') {
         this.body = yield this.render(tpl, {
             scripts: [
+                'http://127.0.0.1:3000/assets/vendor.js',
                 `http://127.0.0.1:3000${bundleUrl}`
             ],
             styles: [],
