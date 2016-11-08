@@ -6,6 +6,7 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var WebpackMd5Hash = require('webpack-md5-hash');
 var prodConfig = require('./webpack.base.config');
 
 prodConfig.plugins = (prodConfig.plugins || []).concat([
@@ -24,7 +25,8 @@ prodConfig.plugins = (prodConfig.plugins || []).concat([
         sourceMap: true,   //线上生成source-map
         mangle: true
     }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new WebpackMd5Hash()
 ]);
 prodConfig.devtool = 'source-map';
 
