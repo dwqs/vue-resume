@@ -4,7 +4,7 @@
            page1
        </article>
        <article id="paga2">
-            page211
+            page21
        </article>
     </main>
 </template>
@@ -12,11 +12,15 @@
 <style scoped lang="less">
     .resume-content{
         position: relative;
+        height: 780px;
         margin-top: 20px;
         border-radius: 4px;
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
         article{
-
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid red;
         }
     }
 </style>

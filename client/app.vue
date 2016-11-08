@@ -14,8 +14,10 @@
         //todo
     }
     .vue-resume{
-        margin: 15px auto;
+        position: relative;
         width: 960px;
+        height: 1024px;
+        margin: 15px auto;
         border: 1px solid blue;
         background-color: #efefef;
     }
