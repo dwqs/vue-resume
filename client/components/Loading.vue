@@ -62,7 +62,12 @@
 
     export default{
         props:{
-            show:Boolean
+            //show:Boolean | [Boolean,String]
+            show:{
+                type:Boolean,
+                default:false,
+                required: true
+            }
         }
     };
 </script>
