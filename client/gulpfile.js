@@ -32,7 +32,6 @@ gulp.task('dev', ['images','fonts'],function(callback) {
     new WebpackDevServer(compiler, webpackConfig.devServer).
     listen(3000, 'localhost', function(err) {
         if(err) throw new gutil.PluginError('webpack-dev-server', err);
-        console.log('bundle is valid');
         //这里监听文件改变然后 重新编译js 没时间搞了,后面再看吧
     });
 });

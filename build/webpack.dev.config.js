@@ -19,11 +19,11 @@ devConfig.plugins = (devConfig.plugins || []).concat([
 ]);
 
 devConfig.devServer = {
-    noInfo: true,
     hot: true,
+    noInfo: false,
+    quite: false,
     port:3000,
     debug:true,
-    quite: false,
     inline: true,
     progress: true,
     historyApiFallback: true,
