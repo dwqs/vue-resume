@@ -117,10 +117,6 @@
             ...mapState({
                 data: state => state.resume.profile
             })
-        },
-
-        updated(){
-            console.log('1111',this.data)
         }
     };
 </script>
