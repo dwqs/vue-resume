@@ -13,7 +13,7 @@
   "scripts": {
     "dev":"cross-env NODE_ENV=development node --harmony ./server/index",
     "prod":"cross-env NODE_ENV=production node --harmony ./server/index",
-    "prod:build": "webpack --progress --hide-modules --config ./build/webpack.prod.config.js"
+    "prod:build": "webpack --progress --hide-modules --config ./build/webpack.prod.config.js && cd ./client && gulp build"
   },
   "dependencies": {
     "vue": "^2.0.0",
