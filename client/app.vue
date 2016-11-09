@@ -1,5 +1,6 @@
 <template>
     <div class="vue-resume">
+        <loading :show="fetching"></loading>
         <resume-header :show="!fetching"></resume-header>
         <resume-content :show="!fetching"></resume-content>
         <float-right></float-right>
@@ -22,9 +23,9 @@
 </style>
 
 <script>
-    import {mapGetters} from 'vuex';
+    import {mapGetters,mapActions} from 'vuex';
 
-    //import Loading from '@components/Loading.vue';
+    import Loading from '@components/Loading.vue';
     import ResumeHeader from '@components/ResumeHeader.vue';
     import ResumeContent from '@components/ResumeContent.vue';
     import ResumeFooter from '@components/ResumeFooter.vue';
@@ -44,16 +45,22 @@
                fetching:'getFetching'
             })
         },
+
+        methods:mapActions(['getResumeData']),
+
         created (){
             //实例的属性已经生成,可以通过 this.fetching 访问
-            this.$store.dispatch('getResumeData');
+            //this.$store.dispatch('getResumeData');
+            //same as
+            this.getResumeData();
         },
 
         components:{
             ResumeHeader,
             ResumeContent,
             ResumeFooter,
-            FloatRight
+            FloatRight,
+            Loading
         }
     };
 </script>
