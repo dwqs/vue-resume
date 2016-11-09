@@ -91,13 +91,13 @@
             .user-name{
                 flex: 1;
                 font-size: 72px;
-                color: #FFF;
+                color: rgba(255,255,255,0.8);
                 margin: 5px 0;
             }
             .job-title{
                 flex: 1;
                 font-size: 36px;
-                color: #FFF;
+                color: rgba(255,255,255,0.8);
                 margin: 5px 0;
             }
         }

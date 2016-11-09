@@ -2,7 +2,7 @@
     <aside class="float-right">
         <ul>
             <li v-for="item in items">
-                <a :href="item.link" @click.stop.prevent="printResume(item.isPrint)" target="_blank">{{item.text}}</a>
+                <a :href="item.link" @click.stop="printResume(item.isPrint)" target="_blank">{{item.text}}</a>
             </li>
         </ul>
     </aside>
