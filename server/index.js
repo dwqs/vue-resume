@@ -24,6 +24,7 @@ app.context.render = render({
     ext: 'html'
 });
 
+//app.use(cors());
 app.use(bodyParser());
 app.use(koaJson());
 // Serve static files
