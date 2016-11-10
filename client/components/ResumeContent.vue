@@ -37,7 +37,24 @@
                    </p>
                </div>
            </div>
-           <div class="right">right</div>
+           <div class="right">
+               <section class="education">
+                    <div class="title-wrap">
+                        <span>教育经历</span>
+                    </div>
+                   <div class="content">
+                       sdas
+                   </div>
+               </section>
+               <section class="works">
+                   <div class="title-wrap">
+                       <span>项目与工作经验</span>
+                   </div>
+                   <div class="content">
+                       项目与工作经验
+                   </div>
+               </section>
+           </div>
        </article>
        <article :class="{active:!prev,inactive:prev}" @click="prev = true">
            <div class="left">
@@ -231,6 +248,41 @@
                     padding: 15px 20px;
                     border-top-right-radius: 4px;
                     border-bottom-right-radius: 4px;
+                    section{
+                        margin-bottom: 25px;
+                        .content{
+                            display: flex;
+                            margin: 15px 0 10px 33px;
+                            font-size: 18px;
+                        }
+                        .title-wrap{
+                            font-size: 24px;
+                            color: #00796b;
+                            line-height: 30px;
+                            border-bottom: 1px solid #00796b;
+                            span{
+                                padding-left: 7px;
+                            }
+                        }
+                        &.education{
+                            .title-wrap:before{
+                                font-family: FontAwesome;
+                                content: '\f02d';
+                            }
+                        }
+                        &.works{
+                            .title-wrap:before{
+                                font-family: FontAwesome;
+                                content: '\f297';
+                            }
+                        }
+                        &.projects{
+                            .title-wrap:before{
+                                font-family: FontAwesome;
+                                content: '\f1d9';
+                            }
+                        }
+                    }
                 }
             }
         }
