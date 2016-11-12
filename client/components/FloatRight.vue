@@ -61,7 +61,7 @@
                     isPrint:false
                 },{
                     text:"PDF下载",
-                    link:"#",
+                    link:"/袁康-个人简历-前端开发.pdf",
                     isPrint:false
                 },{
                     text:"打印简历",
