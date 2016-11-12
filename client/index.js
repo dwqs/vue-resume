@@ -13,20 +13,20 @@ import './styles/print.css';
 import 'babel-polyfill';
 
 import Vue from 'vue';
-import $ from 'jquery';
+//import $ from 'jquery';
 
 import store from './vuex/index';
 import App from './App.vue';
 
 Vue.config.devtools = process.env.NODE_ENV !== 'production' ? true : false;
 
-$(()=>{
-    new Vue({
-        store,
-        el: '#resume-vue',
-        render: h => h(App)
-    });
-});
+// $(()=>{
+//     new Vue({
+//         store,
+//         el: '#resume-vue',
+//         render: h => h(App)
+//     });
+// });
 
 // same as
 
@@ -37,7 +37,8 @@ $(()=>{
 //
 // app.$mount('#resume-vue');
 
-// new Vue({
-//     el: '#resume-vue',
-//     render: h => h(App)
-// });
+new Vue({
+    store,
+    el: '#resume-vue',
+    render: h => h(App)
+});

@@ -72,7 +72,8 @@
             }
 
             .self-evaluation{
-                color: #004d40;
+                //color: #004d40;
+                color: #fff;
                 font-size: 18px;
                 text-indent: 18px;
                 margin-top: 15px;
@@ -130,7 +131,6 @@
         .skills{
             li{
                 position: relative;
-                word-break: normal;
             }
             .skill-name {
                 position: relative;
@@ -138,6 +138,7 @@
                 width: 75px;
                 font-size: 14px;
                 display: inline-block;
+                word-break: normal;
             }
             .skill-bar-wrap {
                 height: 17px;

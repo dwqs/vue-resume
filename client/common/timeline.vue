@@ -11,7 +11,7 @@
                     <a class="project-code" :href="item.online" v-show="page===2 && item.online" @click.stop="false" target="_blank">&nbsp;线上地址</a>
                 </div>
                 <ul class="work-project-list" v-if="page===1">
-                    <li v-for="wp in item.projects">
+                    <li v-for="wp in reverseArr(item.projects)">
                         <h4>{{wp.name}}</h4>
                         <ul class="project-desc" v-show="hasDesc(wp.description)">
                             <li v-for="desc in wp.description">
@@ -60,6 +60,7 @@
                 .project-info {
                     display: flex;
                     align-items: center;
+                    color: #00bfa5;
                     .project-name {
                         display: inline-block;
                         font-weight: bold;
@@ -143,6 +144,13 @@
         methods:{
             hasDesc(desc){
                 return desc && desc.length;
+            },
+
+            reverseArr(arr){
+                //return arr.reverse() will throw err in Vue
+                //because store in the vue is immutable, don't support modify it directly
+                let t = [].concat(arr);
+                return t.reverse();
             }
         }
     }
