@@ -41,7 +41,9 @@ to find the icon you like.
 
 Besides, you should change the sites logo and replace the avatar, there are in `./client/static/images/`.
 You can put your corresponding resources in it. Meanwhile, you should change the static resource path,
-and rerun the command `npm run dev` and `gulp dev`.
+and rerun the command `npm run dev` and `gulp dev`. 
+
+Rerun `gulp clean && gulp dev` when images were loaded error.
 
 ### License
 
