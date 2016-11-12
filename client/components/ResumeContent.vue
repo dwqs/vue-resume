@@ -56,14 +56,6 @@
                        项目与工作经验
                    </div>
                </section>
-               <section class="projects">
-                   <div class="title-wrap">
-                       <span>个人项目</span>
-                   </div>
-                   <div class="content">
-                       个人项目
-                   </div>
-               </section>
            </div>
        </article>
        <article :class="{active:!prev,inactive:prev}" @click="prev = true">
@@ -103,7 +95,33 @@
                    </p>
                </div>
            </div>
-           <div class="right">right2</div>
+           <div class="right">
+               <section class="projects">
+                   <div class="title-wrap">
+                       <span>个人项目</span>
+                   </div>
+                   <div class="content">
+                       <div class="timeline">
+                           <div class="timeline-item" v-for="project in data.projects">
+                                <div class="timeline-item-time">{{project.time}}</div>
+                                <div class="timeline-item-project">
+                                    <div class="circle"></div>
+                                    <div class="project-info">
+                                        <span class="project-name">{{project.name}}</span>
+                                        <a class="project-code" :href="project.source" @click.stop="" target="_blank">&nbsp;源代码</a>
+                                        <a class="project-code" v-show="project.online" :href="project.online" @click.stop="" target="_blank">&nbsp;线上地址</a>
+                                    </div>
+                                    <ul class="project-desc" v-show="hasDesc(project.description)">
+                                        <li v-for="desc in project.description">
+                                            {{desc}}
+                                        </li>
+                                    </ul>
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+               </section>
+           </div>
        </article>
        <footer class="main-footer">
            <span @click="changePage(true)" v-show="!prev">上一页</span>
@@ -178,6 +196,7 @@
                             text-indent: 18px;
                             margin-top: 15px;
                             line-height: 1.5;
+                            word-break: break-all;
                             overflow : hidden;
                             text-overflow: ellipsis;
                             display: -webkit-box;
@@ -301,26 +320,97 @@
                 }
             }
         }
+    }
 
-        .main-footer{
-            position: absolute;
-            left: 0;
-            bottom: -30px;
-            width: 100%;
-            span{
-                cursor: pointer;
-                display: inline-block;
-                padding: 6px 12px;
-                border-radius: 4px;
-                color: rgba(0,191,165,0.8);
-                &:hover{
-                    color: rgba(0,191,165,1);
+    .timeline{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .timeline-item{
+            position: relative;
+            display: flex;
+            padding-bottom: 18px;
+            .timeline-item-time{
+                flex:1;
+                color:#3b3b3b;
+                padding-top: 3px;
+            }
+            .timeline-item-project{
+                position: relative;
+                flex: 3;
+                padding-left: 15px;
+                .circle{
+                    position: absolute;
+                    left: -8px;
+                    top: 3px;
+                    height: 14px;
+                    width: 14px;
+                    border-radius: 100%;
+                    background: #00796b;
                 }
-                &:last-child{
-                    float: right;
-                    &:after{
-                        clear: both;
+                .project-info {
+                    display: flex;
+                    align-items: center;
+                    .project-name {
+                        display: inline-block;
+                        font-weight: bold;
                     }
+                    .project-code {
+                        font-size: 12px;
+                        color: #4db6ac;
+                        border: 1px solid #4db6ac;
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                        margin-left: 15px;
+                        &:before {
+                            font-family: FontAwesome;
+                            content: "\f0c1";
+                        }
+                    }
+                }
+                .project-desc{
+                    padding-top: 10px;
+                    padding-left: 15px;
+                    border-left: 2px solid #00796b;
+                    margin-left: -17px;
+                    max-width:480px;
+                    li{
+                        padding-bottom: 5px;
+                        font-size: 15px;
+                        line-height: 1.5;
+                        &:last-child{
+                            padding-bottom: 0;
+                        }
+                        &:before{
+                            font-family: FontAwesome;
+                            content: '\f069';
+                            padding-right: 7px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-footer{
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+        width: 100%;
+        span{
+            cursor: pointer;
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: rgba(0,191,165,0.8);
+            &:hover{
+                color: rgba(0,191,165,1);
+            }
+            &:last-child{
+                float: right;
+                &:after{
+                    clear: both;
                 }
             }
         }
@@ -351,6 +441,10 @@
         methods: {
             changePage(type){
                 this.prev = type;
+            },
+
+            hasDesc(desc){
+                return desc && desc.length;
             }
         }
     };

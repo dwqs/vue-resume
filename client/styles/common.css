@@ -1,11 +1,13 @@
 *{
     box-sizing: border-box;
+    word-break: break-all;
 }
 
 body{
     background: #e0e0e0;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+    user-select: none;
 }
 
 div,footer,section,header,article,nav,aside,main,figure,address{

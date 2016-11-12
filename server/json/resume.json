@@ -32,5 +32,60 @@
     "school":"广州中医药大学",
     "major":"医学信息工程专业",
     "type":"本科"
-  }
+  },
+  "projects":[
+    {
+      "name": "Vue Resume",
+      "time":"2016.11 - 至今",
+      "source":"https://github.com/dwqs/vue-resume",
+      "online":"http://resume.ido321.com",
+      "description":[
+        "纯粹造轮子, 基于Vue+Node.js的简历生成器",
+        "使用Node.js读取JSON数据, 并吐露模板, 前端使用Vue生成页面",
+        "使用Webpack进行打包, Gulp改进工作流"
+      ]
+    },
+    {
+      "name": "Tech-Read",
+      "time":"2016.04 - 2016-05",
+      "source":"https://github.com/dwqs/tech-read",
+      "online":"http://tech-read.ido321.com",
+      "description":[
+        "使用request库进行网络请求, cheerio库解析DOM树, Node.js提供前端API",
+        "前端采用React进行组件化开发, 使用Flux进行数据流管理, localStorage进行浏览器本地存储"
+      ]
+    },
+    {
+      "name": "Front-end Developer HandBook",
+      "time":"2015.10 - 2015.12",
+      "source":"https://github.com/dwqs/fedHandlebook",
+      "online":"https://dwqs.gitbooks.io/frontenddevhandbook/content/",
+      "description":[
+        "翻译的前端开发者手册",
+        "使用gitbooks生成在线电子书"
+      ]
+    },
+    {
+      "name": "久艾网",
+      "time":"2015.01 - 2015.01",
+      "source":"https://github.com/dwqs/jiuai",
+      "online":"",
+      "description":[
+        "用于收藏自己觉得不错的技术文章",
+        "后台使用PHP, 数据库选用MySQL. 前端选用jQuery库",
+        "熟悉了动态网站的开发方式, 加强了所学技术的运用和理解"
+      ]
+    },
+    {
+      "name": "个人博客",
+      "time":"2014.10 - 2014.11",
+      "source":"https://github.com/dwqs/i94web",
+      "online":"",
+      "description":[
+        "纯粹造轮子,熟练技术运用",
+        "使用div+CSS+jQuery进行前端页面的开发",
+        "后台使用PHP, 数据库选用MySQL"
+      ]
+    }
+  ]
 }
