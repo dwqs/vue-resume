@@ -48,6 +48,50 @@
                </section>
            </div>
        </article>
+       <article class="print">
+           <div class="right">
+               <section class="education">
+                   <div class="title-wrap">
+                       <span>教育经历</span>
+                   </div>
+                   <div class="content">
+                       <span v-for="(value,key) in data.education" :class="key">
+                           {{value}}
+                       </span>
+                   </div>
+               </section>
+               <section class="works">
+                   <div class="title-wrap">
+                       <span>项目与工作经验</span>
+                   </div>
+                   <div class="content">
+                       <time-line :items="data.works" :page="1"></time-line>
+                   </div>
+               </section>
+           </div>
+           <div class="right">
+               <section class="projects">
+                   <div class="title-wrap">
+                       <span>个人项目</span>
+                   </div>
+                   <div class="content">
+                       <time-line :items="data.projects" :page="2"></time-line>
+                   </div>
+               </section>
+               <section class="skill-desc">
+                   <div class="title-wrap">
+                       <span>技能</span>
+                   </div>
+                   <div class="content">
+                       <ul class="skill-desc">
+                           <li v-for="skill in data.skillsDesc">
+                               {{skill}}
+                           </li>
+                       </ul>
+                   </div>
+               </section>
+           </div>
+       </article>
        <footer class="main-footer">
            <span @click="changePage(true)" v-show="!prev">上一页</span>
            <span @click="changePage(false)"  v-show="prev">下一页</span>
@@ -56,6 +100,13 @@
 </template>
 
 <style scoped lang="less">
+    @media screen {
+        .resume-content {
+            .print {
+                display: none;
+            }
+        }
+    }
     .resume-content{
         position: relative;
         height: 1175px;
@@ -173,6 +224,21 @@
                 &:after{
                     clear: both;
                 }
+            }
+        }
+    }
+
+    @media print {
+        .resume-content {
+            article,footer{
+                box-shadow: none;
+                border: none;
+                display: none;
+            }
+            .print {
+                display: flex;
+                flex-direction: column;
+                width: 1000px;
             }
         }
     }

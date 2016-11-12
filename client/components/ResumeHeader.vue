@@ -27,6 +27,7 @@
 </template>
 
 <style scoped lang="less">
+
     .resume-header{
         display: flex;
         align-items: center;
@@ -64,7 +65,6 @@
             }
             &.email:before{
                 content: "\f0e0";
-
             }
             &.github:before{
                 content: "\f092";
@@ -99,6 +99,26 @@
                 font-size: 36px;
                 color: rgba(255,255,255,0.8);
                 margin: 5px 0;
+            }
+        }
+    }
+
+    @media print {
+        .resume-header{
+            border: none;
+            box-shadow: none;
+            figure{
+                display: none;
+            }
+            li{
+                a{
+                    color: #000;
+                }
+            }
+            .title{
+                .user-name,.job-title{
+                    color: #000;
+                }
             }
         }
     }

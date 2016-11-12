@@ -21,6 +21,12 @@
             color:#00BFA5
         }
     }
+
+    @media print {
+        .resume-footer {
+            display: none;
+        }
+    }
 </style>
 
 <script>

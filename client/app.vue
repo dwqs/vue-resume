@@ -20,6 +20,19 @@
         margin: 15px auto;
     }
 
+
+    @media print {
+        body {
+            background: transparent;
+        }
+
+        .vue-resume{
+            background: transparent;
+            width: 1000px;
+            margin-top: 0;
+        }
+    }
+
 </style>
 
 <script>

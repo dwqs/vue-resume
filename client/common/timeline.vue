@@ -122,6 +122,40 @@
             }
         }
     }
+
+    @media print {
+        .timeline {
+            .project-info{
+                a{
+                    display: none;
+                }
+            }
+            .project-desc{
+                margin-top: 10px;
+            }
+            .timeline-item{
+                position: relative;
+                display: flex;
+                padding-bottom: 18px;
+                .timeline-item-time{
+                    flex:1;
+                    color:#3b3b3b;
+                    padding-top: 3px;
+                }
+                .timeline-item-project{
+                    .circle{
+                        display: none;
+                    }
+                    .project-info {
+                        margin-left: -20px;
+                    }
+                    .work-project-list,.project-desc{
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
 </style>
 
 <script>

@@ -6,7 +6,6 @@
 
 import './styles/reset.css';
 import './styles/common.css';
-import './styles/print.css';
 //require('./common./css|less/');
 //import './xxx.less';
 

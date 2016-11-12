@@ -34,6 +34,12 @@
             }
         }
     }
+
+    @media print {
+        .float-right {
+            display: none;
+        }
+    }
 </style>
 
 <script>
