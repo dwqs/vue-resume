@@ -53,7 +53,28 @@
                        <span>项目与工作经验</span>
                    </div>
                    <div class="content">
-                       项目与工作经验
+                       <div class="timeline">
+                           <div class="timeline-item" v-for="work in data.works">
+                               <div class="timeline-item-time">{{work.time}}</div>
+                               <div class="timeline-item-project">
+                                   <div class="circle"></div>
+                                   <div class="project-info">
+                                       <span class="project-name">{{work.company}}</span>
+                                       <span class="work-title">{{work.title}}</span>
+                                   </div>
+                                   <ul class="work-project-list" >
+                                       <li v-for="wp in work.projects">
+                                           <h4>{{wp.name}}</h4>
+                                           <ul class="project-desc" v-show="hasDesc(wp.description)">
+                                               <li v-for="desc in wp.description">
+                                                   {{desc}}
+                                               </li>
+                                           </ul>
+                                       </li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
                    </div>
                </section>
            </div>
@@ -133,14 +154,14 @@
 <style scoped lang="less">
     .resume-content{
         position: relative;
-        height: 780px;
+        height: 1175px;
         margin-top: 20px;
         article{
             display: flex;
             align-items: flex-start;
             position: absolute;
             width: 100%;
-            height: 775px;
+            height: 1175px;
             transform-origin: 50% 0%;
             transition: 1s;
             backface-visibility:hidden;
@@ -249,6 +270,7 @@
                     .skills{
                         li{
                             position: relative;
+                            word-break: normal;
                         }
                         .skill-name {
                             position: relative;
@@ -367,13 +389,18 @@
                             content: "\f0c1";
                         }
                     }
+
+                    .work-title{
+                        display: inline-block;
+                        font-weight: bold;
+                        margin-left: 20px;
+                    }
                 }
                 .project-desc{
                     padding-top: 10px;
                     padding-left: 15px;
                     border-left: 2px solid #00796b;
                     margin-left: -17px;
-                    max-width:480px;
                     li{
                         padding-bottom: 5px;
                         font-size: 15px;
@@ -384,9 +411,24 @@
                         &:before{
                             font-family: FontAwesome;
                             content: '\f069';
-                            padding-right: 7px;
+                            //padding-right: 7px;
                             font-size: 14px;
                         }
+                    }
+                }
+
+                .work-project-list{
+                    border-left: 2px solid #00796b;
+                    margin-left: -17px;
+                    margin-top: 1px;
+                    h4{
+                        padding-top: 10px;
+                        padding-left: 15px;
+                        font-weight: bold;
+                    }
+                    .project-desc{
+                        border:none;
+                        margin-left: 0;
                     }
                 }
             }

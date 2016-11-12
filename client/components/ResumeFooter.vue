@@ -12,7 +12,7 @@
         padding: 20px 6px;
         z-index:1;
         left:0;
-        bottom:-96px;
+        bottom:-496px;
         width:100%;
         text-align:center;
         font-size:16px;
