@@ -41,3 +41,5 @@ new Vue({
     el: '#resume-vue',
     render: h => h(App)
 });
+
+console.log('%cScan QR Code:%c','padding-right:20px','background:url(https://sfault-image.b0.upaiyun.com/146/859/1468591289-582755a8de4ea_articlex) no-repeat; padding:120px 216px;line-height:250px');
