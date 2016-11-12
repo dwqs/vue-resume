@@ -43,7 +43,9 @@
                         <span>教育经历</span>
                     </div>
                    <div class="content">
-                       sdas
+                       <span v-for="(value,key) in data.education" :class="key">
+                           {{value}}
+                       </span>
                    </div>
                </section>
                <section class="works">
@@ -52,6 +54,14 @@
                    </div>
                    <div class="content">
                        项目与工作经验
+                   </div>
+               </section>
+               <section class="projects">
+                   <div class="title-wrap">
+                       <span>个人项目</span>
+                   </div>
+                   <div class="content">
+                       个人项目
                    </div>
                </section>
            </div>
@@ -253,10 +263,10 @@
                         .content{
                             display: flex;
                             margin: 15px 0 10px 33px;
-                            font-size: 18px;
+                            font-size: 17px;
                         }
                         .title-wrap{
-                            font-size: 24px;
+                            font-size: 22px;
                             color: #00796b;
                             line-height: 30px;
                             border-bottom: 1px solid #00796b;
@@ -269,17 +279,22 @@
                                 font-family: FontAwesome;
                                 content: '\f02d';
                             }
+                            .content{
+                                span{
+                                    flex:1
+                                }
+                            }
                         }
                         &.works{
                             .title-wrap:before{
                                 font-family: FontAwesome;
-                                content: '\f297';
+                                content: '\f0b1';
                             }
                         }
                         &.projects{
                             .title-wrap:before{
                                 font-family: FontAwesome;
-                                content: '\f1d9';
+                                content: '\f0f6';
                             }
                         }
                     }
