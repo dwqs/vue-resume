@@ -170,7 +170,7 @@
   "skillsDesc":[
     "熟悉HTML/CSS, 能编写语义化的HTML/CSS, 完成较复杂的布局",
     "熟悉原生JavaScript(ES6)/DOM/BOM的使用, 能脱离jQuery等类库进行编码",
-    "熟悉React/Vue等前端框架, 能运用其编写SPA应用, 并能结合使用jQuery/lodash等类库",
+    "熟悉React/Vue/ReactNative等前端框架, 能运用其编写SPA应用, 并能结合使用jQuery/lodash等类库",
     "熟悉模块化、组件化和面向对象的编程方式, 掌握常见的异步编程解决方案",
     "能够使用Node.js API/Koa搭建简单的后端程序, 用于渲染模板及提供RESTful API",
     "日常使用Webpack/Gulp/Git/Markdown改进工作流",
