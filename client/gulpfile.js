@@ -38,7 +38,7 @@ gulp.task('dev', ['images','fonts'],function(callback) {
 
 // 清空静态资源
 gulp.task('clean', function() {
-    del('../public/*',{read: false, force: true});
+    del(['../public/*','!../public/*.pdf'],{read: false, force: true});
 });
 
 //production
