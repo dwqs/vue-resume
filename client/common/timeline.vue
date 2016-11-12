@@ -1,0 +1,149 @@
+<template>
+    <div class="timeline">
+        <div class="timeline-item" v-for="item in items">
+            <div class="timeline-item-time">{{item.time}}</div>
+            <div class="timeline-item-project">
+                <div class="circle"></div>
+                <div class="project-info">
+                    <span class="project-name">{{item.company || item.name}}</span>
+                    <span class="work-title">{{item.title}}</span>
+                    <a class="project-code" :href="item.source" v-show="page===2" @click.stop="false" target="_blank">&nbsp;源代码</a>
+                    <a class="project-code" :href="item.online" v-show="page===2 && item.online" @click.stop="false" target="_blank">&nbsp;线上地址</a>
+                </div>
+                <ul class="work-project-list" v-if="page===1">
+                    <li v-for="wp in item.projects">
+                        <h4>{{wp.name}}</h4>
+                        <ul class="project-desc" v-show="hasDesc(wp.description)">
+                            <li v-for="desc in wp.description">
+                                {{desc}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="project-desc" v-show="hasDesc(item.description)" v-else>
+                    <li v-for="desc in item.description">
+                        {{desc}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped lang="less">
+    .timeline{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .timeline-item{
+            position: relative;
+            display: flex;
+            padding-bottom: 18px;
+            .timeline-item-time{
+                flex:1;
+                color:#3b3b3b;
+                padding-top: 3px;
+            }
+            .timeline-item-project{
+                position: relative;
+                flex: 3;
+                padding-left: 15px;
+                .circle{
+                    position: absolute;
+                    left: -8px;
+                    top: 3px;
+                    height: 14px;
+                    width: 14px;
+                    border-radius: 100%;
+                    background: #00796b;
+                }
+                .project-info {
+                    display: flex;
+                    align-items: center;
+                    .project-name {
+                        display: inline-block;
+                        font-weight: bold;
+                    }
+                    .project-code {
+                        font-size: 12px;
+                        color: #4db6ac;
+                        border: 1px solid #4db6ac;
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                        margin-left: 15px;
+                        &:before {
+                            font-family: FontAwesome;
+                            content: "\f0c1";
+                        }
+                    }
+
+                    .work-title{
+                        display: inline-block;
+                        font-weight: bold;
+                        margin-left: 20px;
+                    }
+                }
+                .project-desc{
+                    padding-top: 10px;
+                    padding-left: 15px;
+                    border-left: 2px solid #00796b;
+                    margin-left: -17px;
+                    li{
+                        padding-bottom: 5px;
+                        font-size: 15px;
+                        line-height: 1.5;
+                        &:last-child{
+                            padding-bottom: 0;
+                        }
+                        &:before{
+                            font-family: FontAwesome;
+                            content: '\f069';
+                            //padding-right: 7px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .work-project-list{
+                    border-left: 2px solid #00796b;
+                    margin-left: -17px;
+                    margin-top: 1px;
+                    h4{
+                        padding-top: 10px;
+                        padding-left: 15px;
+                        font-weight: bold;
+                    }
+                    .project-desc{
+                        border:none;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+<script>
+
+    export default{
+        props:{
+            items:{
+                type:Array,
+                required:true,
+                default: function(){
+                    return []
+                }
+            },
+            page:{
+                type:Number,
+                required:true
+            }
+        },
+
+        methods:{
+            hasDesc(desc){
+                return desc && desc.length;
+            }
+        }
+    }
+</script>
