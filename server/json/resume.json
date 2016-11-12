@@ -151,7 +151,7 @@
       "online":"",
       "description":[
         "用于收藏自己觉得不错的技术文章",
-        "后台使用PHP, 数据库选用MySQL. 前端选用jQuery库",
+        "后台使用PHP, 数据库选用MySQL, 前端选用jQuery库",
         "熟悉了动态网站的开发方式, 加强了所学技术的运用和理解"
       ]
     },
@@ -161,10 +161,21 @@
       "source":"https://github.com/dwqs/i94web",
       "online":"",
       "description":[
-        "纯粹造轮子,熟练技术运用",
+        "纯粹造轮子, 熟练技术运用",
         "使用div+CSS+jQuery进行前端页面的开发",
         "后台使用PHP, 数据库选用MySQL"
       ]
     }
+  ],
+  "skillsDesc":[
+    "熟悉HTML/CSS, 能编写语义化的HTML/CSS, 完成较复杂的布局",
+    "熟悉原生JavaScript(ES6)/DOM/BOM的使用, 能脱离jQuery等类库进行编码",
+    "熟悉React/Vue等前端框架, 能运用其编写SPA应用, 并能结合使用jQuery/lodash等类库",
+    "熟悉模块化、组件化和面向对象的编程方式, 掌握常见的异步编程解决方案",
+    "能够使用Node.js API/Koa搭建简单的后端程序, 用于渲染模板及提供RESTful API",
+    "日常使用Webpack/Gulp/Git/Markdown改进工作流",
+    "了解Bash/HTML5/CSS3/HTTP协议, 能编写简单的bash脚本和CSS3动画",
+    "了解Less/Sass等预处理工具, 并能在项目中使用其提高编码效率",
+    "了解Apache/Nginx Web服务器, 掌握常见的Linux命令, 有过相关建站经验和反向代理使用经验"
   ]
 }

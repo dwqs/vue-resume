@@ -34,6 +34,18 @@
                        <time-line :items="data.projects" :page="2"></time-line>
                    </div>
                </section>
+               <section class="skill-desc">
+                   <div class="title-wrap">
+                       <span>技能</span>
+                   </div>
+                   <div class="content">
+                        <ul class="skill-desc">
+                            <li v-for="skill in data.skillsDesc">
+                                {{skill}}
+                            </li>
+                        </ul>
+                   </div>
+               </section>
            </div>
        </article>
        <footer class="main-footer">
@@ -74,6 +86,7 @@
                 padding: 15px 20px;
                 border-top-right-radius: 4px;
                 border-bottom-right-radius: 4px;
+
                 section{
                     margin-bottom: 25px;
                     .content{
@@ -111,6 +124,29 @@
                         .title-wrap:before{
                             font-family: FontAwesome;
                             content: '\f0f6';
+                        }
+                    }
+                    &.skill-desc{
+                        .title-wrap:before{
+                            font-family: FontAwesome;
+                            content: '\f0ad';
+                        }
+                    }
+                }
+
+                .skill-desc{
+                    li{
+                        padding-bottom: 5px;
+                        font-size: 15px;
+                        line-height: 1.5;
+                        &:last-child{
+                            padding-bottom: 0;
+                        }
+                        &:before{
+                            font-family: FontAwesome;
+                            content: "\f005";
+                            //padding-right: 7px;
+                            font-size: 14px;
                         }
                     }
                 }

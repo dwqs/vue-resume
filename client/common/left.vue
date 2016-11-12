@@ -74,7 +74,6 @@
             .self-evaluation{
                 //color: #004d40;
                 color: #fff;
-                font-size: 18px;
                 text-indent: 18px;
                 margin-top: 15px;
                 line-height: 1.5;
