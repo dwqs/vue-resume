@@ -7,8 +7,8 @@
                 <div class="project-info">
                     <span class="project-name">{{item.company || item.name}}</span>
                     <span class="work-title">{{item.title}}</span>
-                    <a class="project-code" :href="item.source" v-show="page===2" @click.stop="false" target="_blank">&nbsp;源代码</a>
-                    <a class="project-code" :href="item.online" v-show="page===2 && item.online" @click.stop="false" target="_blank">&nbsp;线上地址</a>
+                    <a class="project-code" :href="item.source" v-show="page===2" @click.stop="" target="_blank">&nbsp;源代码</a>
+                    <a class="project-code" :href="item.online" v-show="page===2 && item.online" @click.stop="" target="_blank">&nbsp;线上地址</a>
                 </div>
                 <ul class="work-project-list" v-if="page===1">
                     <li v-for="wp in reverseArr(item.projects)">
