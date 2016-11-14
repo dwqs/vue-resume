@@ -135,6 +135,15 @@
       ]
     },
     {
+      "name":"Flyicon",
+      "time":"2016.03 - 2016.03",
+      "source":"https://github.com/Flyicon",
+      "online":"http://dwqs.github.io/Flyicon/",
+      "description":[
+        "用pure css实现的一些小图标"
+      ]
+    },
+    {
       "name": "Front-end Developer HandBook",
       "time":"2015.10 - 2015.12",
       "source":"https://github.com/dwqs/fedHandlebook",
