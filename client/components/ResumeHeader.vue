@@ -103,6 +103,21 @@
         }
     }
 
+    @media screen and (max-width: 835px){
+        .avatar{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 675px){
+        .resume-header{
+            padding: 0;
+            .contact{
+                flex: 1;
+            }
+        }
+    }
+
     @media print {
         .resume-header{
             border: none;

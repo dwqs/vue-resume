@@ -9,34 +9,42 @@
 </template>
 
 <style scoped lang="less">
-    .float-right{
-        position: fixed;
-        right: 0;
-        top: 30%;
-        z-index: 2;
-        li{
-            margin-bottom: 10px;
-            border-radius: 10px 0 0 10px;
-            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-            background-color: #00BFA5;
-            cursor: pointer;
-            a{
-                display: inline-block;
-                width: 80px;
-                height: 38px;
-                line-height: 38px;
-                padding-left: 10px;
-                color: rgba(255,255,255,0.8);
-                transition: all .3s ease-out;
-                &:hover{
-                    color: rgba(255,255,255,1);
+    @media print {
+        .float-right {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1140px){
+        .float-right{
+            position: fixed;
+            right: 0;
+            top: 30%;
+            z-index: 2;
+            li{
+                margin-bottom: 10px;
+                border-radius: 10px 0 0 10px;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+                background-color: #00BFA5;
+                cursor: pointer;
+                a{
+                    display: inline-block;
+                    width: 80px;
+                    height: 38px;
+                    line-height: 38px;
+                    padding-left: 10px;
+                    color: rgba(255,255,255,0.8);
+                    transition: all .3s ease-out;
+                    &:hover{
+                        color: rgba(255,255,255,1);
+                    }
                 }
             }
         }
     }
 
-    @media print {
-        .float-right {
+    @media screen and (max-width: 1140px){
+        .float-right{
             display: none;
         }
     }

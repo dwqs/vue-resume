@@ -228,6 +228,24 @@
         }
     }
 
+    @media screen and (max-width: 940px){
+        .resume-content{
+            article{
+                .right{
+                    section{
+                        .content{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*.main-footer{*/
+            /*display: none;*/
+        /*}*/
+    }
+
     @media print {
         .resume-content {
             article,footer{

@@ -11,15 +11,13 @@
 <style scoped lang="less">
     //@import "./test.less";
     @media screen and (min-width:960px){
-        //todo
+        .vue-resume{
+            position: relative;
+            max-width: 960px;
+            height: 1024px;
+            margin: 15px auto;
+        }
     }
-    .vue-resume{
-        position: relative;
-        width: 960px;
-        height: 1024px;
-        margin: 15px auto;
-    }
-
 
     @media print {
         body {

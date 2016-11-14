@@ -7,18 +7,26 @@
 </template>
 
 <style scoped lang="less">
-    .resume-footer{
-        position: absolute;
-        padding: 20px 6px;
-        z-index:1;
-        left:0;
-        bottom:-496px;
-        width:100%;
-        text-align:center;
-        font-size:16px;
-        color:#333;
-        a{
-            color:#00BFA5
+    @media screen and (min-width: 960px){
+        .resume-footer{
+            position: absolute;
+            padding: 20px 6px;
+            z-index:1;
+            left:0;
+            bottom:-496px;
+            width:100%;
+            text-align:center;
+            font-size:16px;
+            color:#333;
+            a{
+                color:#00BFA5
+            }
+        }
+    }
+
+    @media screen and (max-width: 960px){
+        .resume-footer{
+            display: none;
         }
     }
 
