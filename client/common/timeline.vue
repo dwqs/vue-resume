@@ -7,6 +7,7 @@
                 <div class="project-info">
                     <span class="project-name">{{item.company || item.name}}</span>
                     <span class="work-title">{{item.title}}</span>
+                    <span class="project-time">{{item.time}}</span>
                     <a class="project-code" :href="item.source" v-show="page===2" @click.stop="" target="_blank">&nbsp;源代码</a>
                     <a class="project-code" :href="item.online" v-show="page===2 && item.online" @click.stop="" target="_blank">&nbsp;线上地址</a>
                 </div>
@@ -78,6 +79,10 @@
                         }
                     }
 
+                    .project-time{
+                        display: none;
+                    }
+
                     .work-title{
                         display: inline-block;
                         font-weight: bold;
@@ -117,6 +122,44 @@
                     .project-desc{
                         border:none;
                         margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 695px){
+        .timeline{
+            .timeline-item{
+                .timeline-item-time{
+                    display: none;
+                }
+                .timeline-item-project{
+                    .project-info{
+                        .project-code {
+                            display: none;
+                        }
+                        .project-time{
+                            display: inline-block;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 414px){
+        .timeline{
+            .timeline-item{
+                .timeline-item-time{
+                    display: none;
+                }
+                .timeline-item-project{
+                    .project-info{
+                        .work-title{
+                            display: none;
+                        }
                     }
                 }
             }

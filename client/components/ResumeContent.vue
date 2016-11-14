@@ -228,7 +228,7 @@
         }
     }
 
-    @media screen and (max-width: 940px){
+    @media screen and (min-width: 768px) and (max-width: 940px){
         .resume-content{
             article{
                 .right{
@@ -240,10 +240,62 @@
                 }
             }
         }
+    }
 
-        /*.main-footer{*/
-            /*display: none;*/
-        /*}*/
+    @media screen and (max-width: 625px){
+        .resume-content{
+            article{
+                .right{
+                    section{
+                        &.education{
+                            .content{
+                                span:nth-child(3){
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 520px){
+        .resume-content{
+            height: 1275px;
+            article{
+                height: 1275px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 414px){
+        .resume-content{
+            height: 1475px;
+            article{
+                height: 1475px;
+                .right{
+                    section{
+                        &.education{
+                            .content{
+                                span:last-child{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 320px){
+        .resume-content{
+            height: 1675px;
+            article{
+                height: 1675px;
+            }
+        }
     }
 
     @media print {

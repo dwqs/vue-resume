@@ -153,6 +153,13 @@
             }
         }
     }
+
+    @media screen and (max-width: 768px){
+        .left{
+            display: none;
+        }
+    }
+
 </style>
 <script>
 

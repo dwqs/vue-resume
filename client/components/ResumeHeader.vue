@@ -118,6 +118,21 @@
         }
     }
 
+    @media screen and (max-width: 520px){
+        .resume-header{
+            padding: 0;
+            .title{
+                flex: 0.5;
+                .user-name{
+                    font-size: 36px;
+                }
+                .job-title{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
     @media print {
         .resume-header{
             border: none;
