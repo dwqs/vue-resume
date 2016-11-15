@@ -8,6 +8,7 @@
                     <span class="project-name">{{item.company || item.name}}</span>
                     <span class="work-title">{{item.title}}</span>
                     <span class="project-time">{{item.time}}</span>
+                    <span class="project-link">{{item.source}}</span>
                     <a class="project-code" :href="item.source" v-show="page===2" @click.stop="" target="_blank">&nbsp;源代码</a>
                     <a class="project-code" :href="item.online" v-show="page===2 && item.online" @click.stop="" target="_blank">&nbsp;线上地址</a>
                 </div>
@@ -79,7 +80,7 @@
                         }
                     }
 
-                    .project-time{
+                    .project-time,.project-link{
                         display: none;
                     }
 
@@ -168,11 +169,6 @@
 
     @media print {
         .timeline {
-            .project-info{
-                a{
-                    display: none;
-                }
-            }
             .project-desc{
                 margin-top: 10px;
             }
@@ -191,6 +187,12 @@
                     }
                     .project-info {
                         margin-left: -20px;
+                        a{
+                            display: none;
+                        }
+                        .project-link{
+                            display: inline-block;
+                        }
                     }
                     .work-project-list,.project-desc{
                         margin-top: 7px;
