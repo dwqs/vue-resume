@@ -9,7 +9,7 @@ let renderOnline = function*(projectName, bundleUrl,title, tpl) {
     
     this.body = yield this.render(tpl, {
         scripts:['/assets/vendor.js',bundleUrl],
-        styles: [],
+        styles: ['/assets/styles'],
         title: title
     });
 };
@@ -22,7 +22,7 @@ let renderPage = function*(projectName, bundleUrl, title, tpl) {
                 'http://127.0.0.1:3000/assets/vendor.js',
                 `http://127.0.0.1:3000${bundleUrl}`
             ],
-            styles: [],
+            styles: ['/assets/styles'],
             title: title
         });
     } else {
