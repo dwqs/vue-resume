@@ -9,7 +9,7 @@
                     <span class="work-title">{{item.title}}</span>
                     <span class="project-time">{{item.time}}</span>
                     <span class="project-link">{{item.source}}</span>
-                    <a class="project-code" :href="item.source" v-show="page===2" @click.stop="" target="_blank">&nbsp;源代码</a>
+                    <a class="project-code" :href="item.source" v-show="page===2 && item.source" @click.stop="" target="_blank">&nbsp;源代码</a>
                     <a class="project-code" :href="item.online" v-show="page===2 && item.online" @click.stop="" target="_blank">&nbsp;线上地址</a>
                 </div>
                 <ul class="work-project-list" v-if="page===1">
@@ -22,9 +22,13 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="project-desc" v-show="hasDesc(item.description)" v-else>
+                <ul class="project-desc" v-if="hasDesc(item.description) && page === 2">
                     <li v-for="desc in item.description">
-                        {{desc}}
+                        <span v-if="typeof desc === 'string'" :style="{paddingLeft:'5px'}">{{desc}}</span>
+                        <span v-if="typeof desc === 'object'">
+                            {{desc.text}}
+                            <a class="project-code" :href="desc.link" v-show="desc.link" @click.stop="" target="_blank">&nbsp;源代码</a>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -108,6 +112,21 @@
                             //padding-right: 7px;
                             font-size: 14px;
                         }
+                        .desc-link{
+                            display: none;
+                        }
+                        .project-code {
+                            font-size: 12px;
+                            color: #4db6ac;
+                            border: 1px solid #4db6ac;
+                            padding: 2px 5px;
+                            border-radius: 5px;
+                            margin-left: 15px;
+                            &:before {
+                                font-family: FontAwesome;
+                                content: "\f0c1";
+                            }
+                        }
                     }
                 }
 
@@ -132,6 +151,11 @@
     @media screen and (max-width: 695px){
         .timeline{
             .timeline-item{
+                .project-desc{
+                    .project-code {
+                        display: none;
+                    }
+                }
                 .timeline-item-time{
                     display: none;
                 }
@@ -171,6 +195,9 @@
         .timeline {
             .project-desc{
                 margin-top: 10px;
+                .project-code {
+                    display: none;
+                }
             }
             .timeline-item{
                 position: relative;

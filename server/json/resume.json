@@ -19,12 +19,12 @@
     "状态":"目前在职"
   },
   "skills":{
-    "JavaScript": 70,
-    "HTML/CSS": 75,
-    "React": 60,
-    "ReactNative": 55,
-    "Vue": 52,
-    "Node.js": 42
+    "JavaScript": 68,
+    "HTML/CSS": 62,
+    "React": 55,
+    "ReactNative": 50,
+    "Vue": 45,
+    "Node.js": 35
   },
   "evaluation":"热衷和乐于钻研前端技术,具备良好的学习能力、英语阅读和翻译能力。做事认真,工作态度负责,具备团队合作精神。喜欢阅读、跑步和球类运动",
   "education":{
@@ -154,25 +154,29 @@
       ]
     },
     {
-      "name": "久艾网",
-      "time":"2015.01 - 2015.01",
-      "source":"https://github.com/dwqs/jiuai",
+      "name":"其它",
+      "time":"2014.10 - 至今",
+      "source":"",
       "online":"",
-      "description":[
-        "用于收藏自己觉得不错的技术文章",
-        "后台使用PHP, 数据库选用MySQL, 前端选用jQuery库",
-        "熟悉了动态网站的开发方式, 加强了所学技术的运用和理解"
-      ]
-    },
-    {
-      "name": "个人博客",
-      "time":"2014.10 - 2014.11",
-      "source":"https://github.com/dwqs/i94web",
-      "online":"",
-      "description":[
-        "纯粹造轮子, 熟练技术运用",
-        "使用div+CSS+jQuery进行前端页面的开发",
-        "后台使用PHP, 数据库选用MySQL"
+      "description":[{
+              "text": "orbithub--便利的github search chrome 扩展",
+              "link": "https://github.com/dwqs/orbithub"
+          },{
+              "text": "reproto--一个简单的Repay随机密码生成器",
+              "link": "https://github.com/dwqs/reproto"
+          },{
+              "text": "ImageViewer--基于React Native的图片预览组件",
+              "link": "https://github.com/dwqs/react-native-image-viewer"
+          },{
+              "text": "vue-toast--基于Vue.js的Toast组件",
+              "link": "https://github.com/dwqs/vue-toast"
+          },{
+              "text": "jiuai--以 PHP+MySQL+jQuery 写的博文发布站",
+              "link": "https://github.com/dwqs/jiuai"
+          },{
+              "text": "i94web--PHP+MySQL写的个人博客站",
+              "link": "https://github.com/dwqs/i94web"
+          }
       ]
     }
   ],
