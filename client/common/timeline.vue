@@ -22,7 +22,7 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="project-desc" v-if="hasDesc(item.description) && page === 2">
+                <ul class="project-desc" :style="[{marginTop:item.name === '其它'?'1px':0}]" v-if="hasDesc(item.description) && page === 2">
                     <li v-for="desc in item.description">
                         <span v-if="typeof desc === 'string'" :style="{paddingLeft:'5px'}">{{desc}}</span>
                         <span v-if="typeof desc === 'object'">
