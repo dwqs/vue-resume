@@ -5,6 +5,9 @@
         </figure>
         <address class="contact">
             <ul>
+                <li class="tel" id='tel'>
+                    <a href="#">18800169213</a>
+                </li>
                 <li class="email">
                     <a :href="'mailto:'+data.email">{{data.email}}</a>
                 </li>
@@ -14,7 +17,7 @@
                 <li class="blog">
                     <a :href="data.blog" target="_blank">{{data.blog}}</a>
                 </li>
-                <li class="weibo">
+                <li class="weibo" id="weibo">
                     <a :href="data.weibo" target="_blank">{{data.weiboNickname}}</a>
                 </li>
             </ul>
@@ -63,6 +66,9 @@
                 font-family: FontAwesome;
                 color: rgba(255,255,255,0.9);
             }
+            &.tel:before{
+                content: "\f095";
+            }
             &.email:before{
                 content: "\f0e0";
             }
@@ -74,6 +80,10 @@
             }
             &.weibo:before{
                 content: "\f18a";
+            }
+
+            &#tel{
+                display:none
             }
         }
 
@@ -143,6 +153,12 @@
             li{
                 a{
                     color: #000;
+                }
+                &#tel{
+                    display:inline-block;
+                }
+                &#weibo{
+                    display:none;
                 }
             }
             .title{

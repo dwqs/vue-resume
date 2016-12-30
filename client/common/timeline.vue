@@ -26,7 +26,7 @@
                     <li v-for="desc in item.description">
                         <span v-if="typeof desc === 'string'" :style="{paddingLeft:'5px'}">{{desc}}</span>
                         <span v-if="typeof desc === 'object'">
-                            {{desc.text}}
+                            <span class="other-text">{{desc.title}}--{{desc.text}}</span>
                             <a class="project-code" :href="desc.link" v-show="desc.link" @click.stop="" target="_blank">&nbsp;源代码</a>
                         </span>
                     </li>
@@ -112,7 +112,7 @@
                             //padding-right: 7px;
                             font-size: 14px;
                         }
-                        .desc-link{
+                        .other-print{
                             display: none;
                         }
                         .project-code {
@@ -219,6 +219,13 @@
                         }
                         .project-link{
                             display: inline-block;
+                        }
+                    }
+                    .project-desc{
+                        li{
+                            .other-print{
+                                display: inline-block;
+                            }
                         }
                     }
                     .work-project-list,.project-desc{
