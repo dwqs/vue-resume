@@ -144,11 +144,15 @@
       "source":"",
       "online":"",
       "description":[{
+            "text": "替换 github「辣眼睛」的主题色",
+            "link": "https://github.com/dwqs/infine",
+            "title": "infine"
+          },{
               "text": "用于前端项目脚手架的CLI工具",
               "link": "https://github.com/dwqs/chare",
               "title": "chare"
           },{
-              "text": "便利的github search chrome 扩展",
+              "text": "github 搜索的 chrome 扩展",
               "link": "https://github.com/dwqs/orbithub",
               "title": "orbithub"
           },{
