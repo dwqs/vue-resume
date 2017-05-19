@@ -27,6 +27,11 @@ devConfig.devServer = {
     inline: true,
     progress: true,
     historyApiFallback: true,
+    // 解决 vue 下的热更新跨域问题
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+    },
     colors: true,
     stats: 'normal',
     contentBase:'/public/assets',
