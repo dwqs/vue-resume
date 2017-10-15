@@ -1,0 +1,17 @@
+{
+    "apps": [
+        {
+            "name": "resume",
+            "script": "./server/index.js",
+            "args": [],
+            "log_date_format": "YYYY-MM-DD HH:mm Z",
+            "error_file": "resume.log",
+            "out_file": "resume.log",
+            "node_args": "--harmony",
+            "cwd": ".",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    ]
+}
