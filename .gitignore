@@ -10,3 +10,4 @@ Thumbs.db
 *.db
 test.js
 test/
+package-lock.json
