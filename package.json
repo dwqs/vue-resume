@@ -1,18 +1,21 @@
 {
   "name": "vue-resume",
   "version": "0.0.1",
-  "author":"pomy",
+  "author": "pomy",
   "description": "online resume generator",
   "license": "MIT",
-  "keywords": ["resume","vue"],
+  "keywords": [
+    "resume",
+    "vue"
+  ],
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/dwqs/vue-resume.git"
   },
   "scripts": {
-    "dev":"cross-env NODE_ENV=development node --harmony ./server/index",
-    "prod":"cross-env NODE_ENV=production node --harmony ./server/index",
+    "dev": "cross-env NODE_ENV=development node --harmony ./server/index",
+    "prod": "cross-env NODE_ENV=production node --harmony ./server/index",
     "prod:build": "./node_modules/.bin/webpack --progress --hide-modules --config ./build/webpack.prod.config.js && cd ./client && gulp build"
   },
   "dependencies": {
@@ -55,8 +58,10 @@
     "webpack-dev-server": "^1.12.0",
     "webpack-md5-hash": "^0.0.5"
   },
-  "maintainers": [{
+  "maintainers": [
+    {
       "name": "pomy",
       "email": "pomysky@gmail.com"
-    }]
+    }
+  ]
 }
