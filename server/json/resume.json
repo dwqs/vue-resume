@@ -1,6 +1,6 @@
 {
   "resumeTitle": "袁康 - 个人简历",
-  "jobTitle":"前端攻城狮",
+  "jobTitle":"前端工程师",
   "name":"袁康",
   "avatar":"/images/pomy.jpg",
   "email":"pomysky@gmail.com",
@@ -15,18 +15,19 @@
   },
   "jobs":{
     "职位":"前端开发工程师",
-    "地点":"北杭上深",
+    "地点":"深圳",
     "状态":"目前在职"
   },
   "skills":{
-    "JavaScript": 68,
-    "HTML/CSS": 62,
-    "React": 55,
+    "JavaScript": 70,
+    "Vue": 68,
+    "HTML/CSS": 67,
+    "React": 63,
+    "Webpack": 62,
     "ReactNative": 50,
-    "Vue": 55,
-    "Node.js": 35
+    "Node.js": 38
   },
-  "evaluation":"热衷和乐于钻研前端技术,具备良好的学习能力、英语阅读和翻译能力。做事认真,工作态度负责,具备团队合作精神。喜欢阅读、跑步和球类运动",
+  "evaluation":"热衷和乐于钻研前端技术,具备良好的学习能力、英语阅读和翻译能力。做事认真,工作态度负责,具备团队合作精神. 喜欢阅读、跑步和球类运动",
   "education":{
     "time":"2012.09-2016.07",
     "school":"广州中医药大学",
@@ -35,40 +36,43 @@
   },
   "works":[
     {
+      "company":"Followme",
+      "time":"2017.04 - 至今",
+      "title":"前端开发工程师",
+      "projects": [
+        {
+          "name": "团队建设",
+          "description": [
+            "多次组织团队内部分享，主要主题有：脚手架、vue-router 源码分析、交易系统的优化思考、Webpack 的构建优化等",
+            "负责前端团队基础组件的开发"
+          ]
+        },
+        {
+          "name": "在线交易系统的重构和迭代",
+          "description": [
+            "负责系统前期重构，将系统由 ASP 转为基于 Vue 的复杂单页应用",
+            "负责交易系统2.0的迭代：https://trade.followme.com (需登录)"
+          ]
+        }
+      ]
+    },
+    {
       "company":"美团",
-      "time":"2016.07 - 至今",
+      "time":"2016.07 - 2017.03",
       "title":"前端开发工程师",
       "projects":[
         {
-          "name":"聊天文件",
+          "name":"移动端OA项目",
           "description":[
-            "集中展示Web端IM中发送的文件",
-            "提供文件的下载/预览/多选等功能",
-            "基于视觉稿和交互稿，使用React+Redux完成相关界面和功能开发"
+            "从0开始完成日志、审批等 OA 系统的构建和开发",
+            "项目主要提供给内部员工使用"
           ]
         },
         {
-          "name":"公共文件前台/后台前台",
-          "description":[
-            "为企业用户提供的文件管理功能",
-            "犀牛云盘的浓缩版",
-            "权限访问管理"
-          ]
-        },
-        {
-          "name":"审批",
-          "description":[
-            "为用户提供常见的审批申请类型管理",
-            "独立完成审批发起/查看/流程管理等功能",
-            "使用React Native进行移动端开发, 使用Redux进行应用状态管理"
-          ]
-        },
-        {
-          "name":"日志",
-          "description":[
-            "为用户提供日报管理",
-            "提供日志创建/查看等功能",
-            "使用Vue进行移动端开发, 使用Vuex进行应用状态管理"
+          "name": "基于 Web 的文件管理系统",
+          "description": [
+            "与内部 IM 系统集成, 主要参与实现文件的下载/预览/多选等功能",
+            "负责中后台系统的开发，提供文件的基本管理功能"
           ]
         }
       ]
@@ -81,17 +85,10 @@
         {
           "name":"犀牛云盘",
           "description":[
-            "使用jQuery+Handlebars产品一期开发, 提供文件上传/删除/下载/文件夹创建/组创建/人员管理等功能",
-            "使用Flux+React进行产品二期开发, 提供组置顶和重命名/文件转移/预览/分享/权限管理等功能",
-            "使用React+Redux进行产品三期开发, 提供文件多选/列表排序/视图切换等功能"
-          ]
-        },
-        {
-          "name":"群空间/我的文件",
-          "description":[
-            "将犀牛云盘和Web端IM进行集成",
-            "跨团队合作",
-            "基于视觉稿和交互稿，使用React+Redux完成相关界面和功能开发"
+            "从0参与云盘的开发和迭代",
+            "参与多次技术方案升级的重构",
+            "实现文件的删除、下载、预览等功能",
+            "与内部 IM 系统集成，实现群组的创建以及人员管理等功能"
           ]
         }
       ]
@@ -99,84 +96,54 @@
   ],
   "projects":[
     {
-      "name": "Vue Resume",
-      "time":"2016.11 - 2016.11",
-      "source":"https://github.com/dwqs/vue-resume",
-      "online":"http://resume.ido321.com",
-      "description":[
-        "纯粹造轮子, 基于Vue+Node.js的简历生成器",
-        "使用Node.js读取JSON数据, 并吐露模板, 前端使用Vue生成页面",
-        "使用Webpack进行打包, Gulp改进工作流"
+      "name": "vue-to-react",
+      "source": "https://github.com/dwqs/vue-to-react",
+      "description": [
+        "尝试将 Vue 组件转换成 React 组件的 CLI 工具"
       ]
     },
     {
-      "name": "Tech-Read",
-      "time":"2016.04 - 2016-05",
-      "source":"https://github.com/dwqs/tech-read",
-      "online":"http://tech-read.ido321.com",
-      "description":[
-        "使用request库进行网络请求, cheerio库解析DOM树, Node.js提供前端API",
-        "前端采用React进行组件化开发, 使用Flux进行数据流管理, localStorage进行浏览器本地存储"
+      "name": "vue-area-linkage",
+      "source": "https://github.com/dwqs/vue-area-linkage",
+      "description": [
+        "基于 Vue 的(中国)省市区联动选择器"
       ]
     },
     {
-      "name":"Flyicon",
-      "time":"2016.03 - 2016.03",
-      "source":"https://github.com/Flyicon",
-      "online":"http://dwqs.github.io/Flyicon/",
-      "description":[
-        "用pure css实现的一些小图标"
+      "name": "v2-datepicker",
+      "source": "https://github.com/dwqs/v2-datepicker",
+      "description": [
+        "基于 Vue 的日期选择组件"
       ]
     },
     {
-      "name": "Front-end Developer HandBook",
-      "time":"2015.10 - 2015.12",
-      "source":"https://github.com/dwqs/fedHandlebook",
-      "online":"https://dwqs.gitbooks.io/frontenddevhandbook/content/",
-      "description":[
-        "翻译的前端开发者手册",
-        "使用gitbooks生成在线电子书"
+      "name": "v2-table",
+      "source": "https://github.com/dwqs/v2-table",
+      "description": [
+        "基于 Vue 的table组件"
       ]
     },
     {
-      "name":"其它",
-      "time":"2014.10 - 至今",
-      "source":"",
-      "online":"",
-      "description":[{
-            "text": "替换 github「辣眼睛」的主题色",
-            "link": "https://github.com/dwqs/infine",
-            "title": "infine"
-          },{
-              "text": "用于前端项目脚手架的CLI工具",
-              "link": "https://github.com/dwqs/chare",
-              "title": "chare"
-          },{
-              "text": "github 搜索的 chrome 扩展",
-              "link": "https://github.com/dwqs/orbithub",
-              "title": "orbithub"
-          },{
-              "text": "个简单的Relay随机密码生成器",
-              "link": "https://github.com/dwqs/reproto",
-              "title": "reproto"
-          },{
-              "text": "基于React Native的图片预览组件",
-              "link": "https://github.com/dwqs/react-native-image-viewer",
-              "title": "ImageViewer"
-          },{
-              "text": "基于Vue.js的Toast组件",
-              "link": "https://github.com/dwqs/vue-toast",
-              "title": "vue-toast"
-          }
+      "name": "react-native-image-viewer",
+      "source": "https://github.com/dwqs/react-native-image-viewer",
+      "description": [
+        "基于React Native的图片预览组件"
+      ]
+    },
+    {
+      "name": "Front-end Handbook",
+      "source": "https://github.com/dwqs/fedHandlebook",
+      "online": "https://dwqs.gitbooks.io/frontenddevhandbook/content/",
+      "description":[
+        "独立翻译的前端开发者手册"
       ]
     }
   ],
   "skillsDesc":[
     "熟悉HTML/CSS, 能编写语义化的HTML/CSS, 完成较复杂的布局",
-    "熟悉原生JavaScript(ES6)/DOM/BOM的使用, 能脱离jQuery等类库进行编码",
+    "熟悉JavaScript(ES6)/DOM/BOM, 能脱离jQuery等类库进行编码",
     "拥有React/Vue/React Native等前端框架的项目实践经验, 能运用其编写SPA应用",
-    "能够使用Node.js API/Koa搭建简单的后端程序, 用于渲染模板及提供RESTful API",
-    "日常使用Webpack/Gulp/Git/Markdown改进工作流, 掌握常见的Linux命令",
-    "了解Bash/HTML5/CSS3/HTTP协议/Less等预处理工具, 有Nginx建站和反向代理使用经验"
+    "了解 Node.js/Koa，能基于 Koa 搭建 RESTful API 层",
+    "日常使用Webpack/Gulp/Git/Markdown改进工作流, 掌握常见的Linux命令"
   ]
 }
