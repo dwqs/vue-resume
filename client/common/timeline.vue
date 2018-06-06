@@ -1,7 +1,7 @@
 <template>
     <div class="timeline">
         <div class="timeline-item" v-for="item in items">
-            <div class="timeline-item-time">{{item.time}}</div>
+            <div class="timeline-item-time" v-if="time">{{item.time}}</div>
             <div class="timeline-item-project">
                 <div class="circle"></div>
                 <div class="project-info">
@@ -251,6 +251,10 @@
             page:{
                 type:Number,
                 required:true
+            },
+            time: {
+                type: Boolean,
+                default: true
             }
         },
 

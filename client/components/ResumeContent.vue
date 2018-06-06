@@ -31,7 +31,7 @@
                        <span>个人项目</span>
                    </div>
                    <div class="content">
-                       <time-line :items="data.projects" :page="2"></time-line>
+                       <time-line :time="false" :items="data.projects" :page="2"></time-line>
                    </div>
                </section>
                <section class="skill-desc">
@@ -75,7 +75,7 @@
                        <span>个人项目</span>
                    </div>
                    <div class="content">
-                       <time-line :items="data.projects" :page="2"></time-line>
+                       <time-line :time="false" :items="data.projects" :page="2"></time-line>
                    </div>
                </section>
                <section class="skill-desc">
@@ -308,7 +308,7 @@
             .print {
                 display: flex;
                 flex-direction: column;
-                width: 1000px;
+                width: 1100px;
             }
         }
     }
