@@ -18,7 +18,8 @@ npm run dev
 //open another terminal and cd pwd
 cd ./client
 
-gulp dev
+// npm >= 5.2.0
+npx gulp dev
 
 //for production, cd the root directory of project
 npm run prod:build
